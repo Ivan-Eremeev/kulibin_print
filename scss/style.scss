@@ -1,39 +1,53 @@
 @import 'mixins';
 
-@include reset(); // Сброс стилей
 
 // Переменные для кастомизации Bootstrap 5
 $grid-gutter-width: 20px; // Отступы между колонками
 $grid-columns: 12; // Колличество колонок
 $grid-breakpoints: ( // Брейкпоинты
-  xs: 0,
+xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
-) !default;
-$container-max-widths: ( // Максимальная ширина контейнера
+  xxl: 1600px
+  ) !default;
+  $container-max-widths: ( // Максимальная ширина контейнера
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
-) !default;
-$gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
-
-@import 'bootstrap/bootstrap'; // Подключение бутстрап
+  xl: 1200px,
+  xxl: 1584px
+  ) !default;
+  $gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
+  
+  @import 'bootstrap/bootstrap'; // Подключение бутстрап
+  
+@include reset(); // Сброс стилей
 
 // Шрифты
-// @include font-face("EastAP", "../fonts/EastAP/EastAP", bold, italic);
+@include font-face("RFDewi", "../fonts/RFDewi/RFDewi-Thin", 100, normal);
+@include font-face("RFDewi", "../fonts/RFDewi/RFDewi-Ultralight", 200, normal);
+@include font-face("RFDewi", "../fonts/RFDewi/RFDewi-Light", 300, normal);
+@include font-face("RFDewi", "../fonts/RFDewi/RFDewi-Regular", normal, normal);
+@include font-face("RFDewi", "../fonts/RFDewi/RFDewi-Semibold", 500, normal);
+@include font-face("RFDewi", "../fonts/RFDewi/RFDewi-Bold", bold, normal);
+@include font-face("RFDewi", "../fonts/RFDewi/RFDewi-Ultrabold", 800, normal);
+@include font-face("RFDewi", "../fonts/RFDewi/RFDewi-Black", 900, normal);
+@include font-face("RFDewi", "../fonts/RFDewi/RFDewi-Italic", normal, italic);
+@include font-face("RFDewi", "../fonts/RFDewi/RFDewi-BoldItalic", bold, italic);
 
 // Цвета
 // $black: #000;
+$red: #D83A56;
+$redHov: #F83F60;
 
 // Подключение файлов
 @import 'blocks/settings';
-@import 'hamburgers/hamburgers';
+// @import 'hamburgers/hamburgers';
+@import 'blocks/header';
 @import 'blocks/menu';
+@import 'blocks/welcome';
 // @import 'blocks/accordion';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';

@@ -1,0 +1,40 @@
+.welcome {
+  padding: 180px 0 100px;
+  min-height: 980px;
+  position: relative;
+  background-image: url(../img/grid.png);
+  background-position: top right;
+  background-size: 100% auto;
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+  &__title {
+    max-width: 1050px;
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 56px;
+  }
+  &__text {
+    max-width: 560px;
+    color: #878889;
+    margin-bottom: 86px;
+  }
+  &__buttons {
+    margin-left: -16px;
+  }
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  @include media-breakpoint-down(xxl) {
+    &__title {
+      max-width: 750px;
+      font-size: 46px;
+      margin-bottom: 46px;
+    }
+  }
+}
