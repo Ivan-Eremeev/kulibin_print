@@ -770,4 +770,65 @@ $(document).ready(function () {
 	// }
 	// replace($('#block'), $('#to'), $('#from'), breakLg);
 
+	// Видео youtube
+	// $(function () {
+	// 	if ($(".js_youtube")) {
+	// 		// $(".js_youtube").each(function () {
+	// 			// Зная идентификатор видео на YouTube, легко можно найти его миниатюру
+	// 			// $('.video__wrapper').css({
+	// 			// 	'background-image': 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)',
+	// 			// 	'background-size': '100%'
+	// 			// });
+
+	// 			// Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
+	// 			// $(this).append($('<div class="video__play"></div>'));
+
+	// 		// });
+
+	// 		$('.js_youtube').on('click', function () {
+	// 			// создаем iframe со включенной опцией autoplay
+	// 			var videoId = $(this).attr('id');
+	// 			var iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
+	// 			// if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
+
+	// 			// Высота и ширина iframe должны быть такими же, как и у родительского блока
+	// 			var iframe = $('<iframe/>', {
+	// 				'frameborder': '0',
+	// 				'src': iframe_url,
+	// 				'width': $('.video__frame').width(),
+	// 				'height': $('.video__frame').innerHeight()
+	// 			})
+
+	// 			// Убираем "Посмотрите видео" при воспроизведении
+	// 			$('.videoOver').hide();
+
+	// 			// Заменяем миниатюру HTML5 плеером с YouTube
+	// 			$(this).append(iframe);
+
+	// 		});
+	// 	}
+	// });
+
+	// Вставка видео с ютуб
+	function youtubeInsert() {
+		$('.js_youtube').on('click', function () {
+			var $this = $(this),
+					url = iframe_url = "https://www.youtube.com/embed/" + $(this).attr('id') + "?autoplay=1&autohide=1",
+					active = false;
+			var iframe = $('<iframe/>', {
+				'frameborder': '0',
+				'src': iframe_url,
+				'allow': 'autoplay',
+			});
+			// Убираем "Посмотрите видео" при воспроизведении
+			$('.videoOver').hide();
+			// Заменяем миниатюру HTML5 плеером с YouTube
+			if (!active) {
+				$this.append(iframe);	
+				active = true;
+			}
+		})
+	}
+	youtubeInsert();
+
 });

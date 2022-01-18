@@ -1,0 +1,81 @@
+.advantages {
+  padding: 120px 0 100px;
+  background-color: #fff;
+  &__col {
+    margin-bottom: 20px;
+  }
+  &__item {
+    display: block;
+    height: 100%;
+    padding: 56px 64px;
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    border-radius: 16px;
+    transition: 0.5s;
+    color: #000;
+    &:hover {
+      box-shadow: 0px 80px 80px rgba(0, 0, 0, 0.03), 0px 51.8519px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 30.8148px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 16px 13px rgba(0, 0, 0, 0.015), 0px 6.51852px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.48148px 3.14815px rgba(0, 0, 0, 0.00722222);
+    }
+  }
+  &__title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    span {
+      color: $red;
+    }
+  }
+  &__text {
+    color: #5C5C5C;
+    margin-bottom: 42px;
+  }
+  &__more {
+    display: flex;
+    align-items: center;
+    margin-bottom: 56px;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:after {
+      content: '';
+      flex-shrink: 0;
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin-left: 8px;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_78_1276)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.666992 8.00016C0.666992 12.0502 3.95033 15.3335 8.00033 15.3335C12.0503 15.3335 15.3337 12.0502 15.3337 8.00016C15.3337 3.95016 12.0503 0.666829 8.00033 0.666829C3.95032 0.666829 0.666992 3.95016 0.666992 8.00016ZM6.50049 10.1335C6.4994 10.2281 6.52322 10.3213 6.56956 10.4038C6.6159 10.4863 6.68312 10.5552 6.76449 10.6035C6.84353 10.649 6.93402 10.6706 7.02509 10.6659C7.11616 10.6612 7.20392 10.6302 7.27782 10.5768L10.2778 8.4435C10.3475 8.39258 10.404 8.32582 10.4427 8.24873C10.4814 8.17163 10.5012 8.08643 10.5005 8.00016C10.5013 7.91378 10.4816 7.82845 10.4429 7.75123C10.4041 7.67401 10.3476 7.60714 10.2778 7.55616L7.27782 5.42283C7.20392 5.36941 7.11616 5.33847 7.02509 5.33374C6.93402 5.32901 6.84353 5.35069 6.76449 5.39616C6.68302 5.44452 6.61573 5.51348 6.56939 5.5961C6.52304 5.67873 6.49928 5.7721 6.50049 5.86683L6.50049 10.1335Z' fill='%23D83A56'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_78_1276'%3E%3Crect width='16' height='16' fill='white' transform='translate(0 16) rotate(-90)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  &__img {
+    text-align: center;
+  }
+  @include media-breakpoint-down(xxl) {
+    padding: 100px 0 80px;
+    &__item {
+      padding: 46px;
+    }
+    &__title {
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+    &__text {
+      font-size: 16px;
+      margin-bottom: 26px;
+    }
+    &__more {
+      font-size: 13px;
+      margin-bottom: 36px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding: 80px 0 60px;
+    &__item {
+      padding: 36px 32px 20px;
+    }
+    &__title {
+      font-size: 26px;
+      line-height: 31px;
+    }
+  }
+}

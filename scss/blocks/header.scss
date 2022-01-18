@@ -440,6 +440,10 @@
     &__line {
       bottom: -40px;
     }
+    &__dropmenu {
+      width: 930px;
+      padding: 56px 80px 56px 32px;
+    }
   }
   @include media-breakpoint-down(lg) {
     &__lang {
@@ -450,6 +454,22 @@
       top: auto;
       bottom: calc(100% + 10px);
       transform: translate(0, -10px);
+    }
+    &__btn {
+      margin-right: 0;
+    }
+    &__regbuttons {
+      margin-left: 0;
+    }
+    &__col {
+      &:nth-child(1) {
+        width: auto;
+        flex-grow: 1;
+      }
+      &:nth-child(3) {
+        width: auto;
+        flex-grow: 1;
+      }
     }
   }
 }
