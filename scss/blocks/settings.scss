@@ -15,6 +15,9 @@ textarea {
   font-family: "RFDewi", sans-serif;
   font-size: 18px;
   line-height: 1.5;
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+  }
 }
 body {
   height: 100%;
@@ -26,6 +29,29 @@ body {
   letter-spacing: -0.02em;
   &.lock {
     position: fixed;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+  }
+}
+.nout-hide {
+  @include media-breakpoint-down(lg) {
+    display: none !important;
+  }
+}
+.nout-visible {
+  @include media-breakpoint-up(lg) {
+    display: none !important;
+  }
+}
+.tablet-hide {
+  @include media-breakpoint-down(md) {
+    display: none !important;
+  }
+}
+.tablet-visible {
+  @include media-breakpoint-up(md) {
+    display: none !important;
   }
 }
 .mobile-hide {
@@ -74,7 +100,10 @@ body {
 }
 .content {
   flex-grow: 1;
-  padding-top: 160px;
+  // padding-top: 160px;
+  @include media-breakpoint-down(xxl) {
+    // padding-top: 140px;
+  }
 }
 .btn {
   display: inline-flex;

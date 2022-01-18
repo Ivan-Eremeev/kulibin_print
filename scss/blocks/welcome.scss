@@ -3,8 +3,10 @@
   min-height: 980px;
   position: relative;
   background-image: url(../img/grid.png);
-  background-position: top right;
+  background-position: bottom -300px right;
   background-size: 100% auto;
+  background-repeat: no-repeat;
+  overflow: hidden;
   &__content {
     position: relative;
     z-index: 2;
@@ -31,10 +33,57 @@
     right: 0;
   }
   @include media-breakpoint-down(xxl) {
+    min-height: 780px;
+    padding: 160px 0 80px;
     &__title {
       max-width: 750px;
       font-size: 46px;
       margin-bottom: 46px;
+    }
+    &__img {
+      width: 61%;
+      right: -100px;
+      bottom: 50%;
+      transform: translate(0,50%);
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    background-position: bottom -100px right;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 64px 0;
+    background-position: top right;
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    &__content {
+      order: 2;
+    }
+    &__img {
+      width: 100%;
+      position: static;
+      right: auto;
+      bottom: auto;
+      order: 1;
+      text-align: center;
+      transform: translate(0,0);
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__title {
+      font-size: 36px;
+      margin-bottom: 24px;
+    }
+    &__text {
+      margin-bottom: 46px;
+    }
+    &__buttons {
+      margin-left: 0;
+      .menu__btn {
+        width: 100%;
+        margin-left: 0;
+      }
     }
   }
 }

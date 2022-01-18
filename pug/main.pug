@@ -44,7 +44,9 @@ block content
 									.menu__btn-title Стать дилером
 									.menu__btn-text Присоединяйтесь к нам
 					.welcome__img 
-						img(src="img/welcome.png", alt="")
+						picture 
+							source(media="(max-width: 768px)", srcset="img/welcome_sm.png")
+							img(src="img/welcome.png", alt="")
 			//	/welcome
 			
 		include blocks/footer.pug

@@ -1,5 +1,6 @@
 .header {
-  position: fixed;
+  // position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -48,20 +49,26 @@
     display: flex;
     align-items: center;
     font-size: 16px;
-    margin-left: -20px;
+    margin-left: -5px;
     li {
-      margin-left: 20px;
+      margin-left: 5px;
     }
     a {
-      padding: 7px 0 9px;
+      display: block;
+      padding: 7px 16px 9px;
+      border-radius: 32px;
       white-space: nowrap;
       color: #111111;
+      &:hover {
+        background-color: #D2D3D4;
+      }
     }
   }
   &__btn {
     width: 30px;
     height: 30px;
-    margin-right: 70px;
+    margin-right: 50px;
+    flex-shrink: 0;
     position: relative;
     cursor: pointer;
     user-select: none;
@@ -94,7 +101,6 @@
   &__childin {
     a {
       padding: 7px 30px 9px 16px;
-      background: #E0E2E3;
       border-radius: 32px;
       position: relative;
       &:hover {
@@ -108,7 +114,7 @@
       margin-left: 5px;
       fill: #B8B9BA;
       position: absolute;
-      top: 10px;
+      top: 12px;
       right: 10px;
       transition: 0.2s;
     }
@@ -427,6 +433,23 @@
       display: block;
       cursor: pointer;
       user-select: none;
+    }
+    &__container {
+      padding: 40px 0;
+    }
+    &__line {
+      bottom: -40px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__lang {
+      margin-left: 20px;
+      margin-right: 0;
+    }
+    &__langdrop {
+      top: auto;
+      bottom: calc(100% + 10px);
+      transform: translate(0, -10px);
     }
   }
 }
