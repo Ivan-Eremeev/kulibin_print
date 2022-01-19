@@ -832,4 +832,25 @@ $(document).ready(function () {
 	}
 	youtubeInsert();
 
+	// swiper sliderArticles
+	const sliderArticles = new Swiper('#sliderArticles', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		pagination: {
+			el: '.slider__pagination',
+			clickable: true,
+		},
+		breakpoints: {
+			1600: {
+				slidesPerView: 4,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 2,
+			}
+		}
+	});
+
 });

@@ -4,6 +4,7 @@ block title
 	title Главная
 
 block style-libs
+	link(rel="stylesheet", href="css/libs/swiper-bundle.min.css")
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
 	//- link(rel="stylesheet", href="css/libs/fullpage.css")
 	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
@@ -15,6 +16,8 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/aos.css")
 
 block content
+
+	include blocks/article.pug
 
 	.page
 
@@ -60,49 +63,7 @@ block content
 								path(d="M0.75293 37.5194V0.480469L25.714 18.9999L0.75293 37.5194Z")
 			//	/video
 
-			// advantages
-			.advantages
-				.container 
-					.row 
-						.advantages__col.col-lg-6
-							a(href="#").advantages__item 
-								h3.advantages__title Печать 
-									span в 4 раза 
-									| быстрее 
-								p.advantages__text Скорость печати быстрее всех известных на рынке стандартных принтеров американского и китайского производства без потери в качестве.
-								.advantages__more Узнать больше
-								.advantages__img 
-									picture
-										source(media="(max-width: 576px)", srcset="img/advantage_1_sm.jpg")
-										img(src="img/advantage_1.jpg", alt="")
-						.advantages__col.col-lg-6
-							a(href="#").advantages__item 
-								h3.advantages__title Регулируемая платформа
-								p.advantages__text Печатная платформа регулируется автоматически и не требует настройки оператором принтера.
-								.advantages__more Узнать больше
-								.advantages__img 
-									picture
-										source(media="(max-width: 576px)", srcset="img/advantage_2_sm.jpg")
-										img(src="img/advantage_2.jpg", alt="")
-						.advantages__col.col-lg-6
-							a(href="#").advantages__item 
-								h3.advantages__title Автодолив полимера
-								p.advantages__text С помощью автоматической системы долива расходного материала принтер позволяет пользователю практически не контролировать процесс.
-								.advantages__more Узнать больше
-								.advantages__img 
-									picture
-										source(media="(max-width: 576px)", srcset="img/advantage_3_sm.jpg")
-										img(src="img/advantage_3.jpg", alt="")
-						.advantages__col.col-lg-6
-							a(href="#").advantages__item 
-								h3.advantages__title Не требует постобработки
-								p.advantages__text Вы экономите на дополнительном оборудовании для промывки готового изделия и его дозасветки после печати.
-								.advantages__more Узнать больше
-								.advantages__img 
-									picture
-										source(media="(max-width: 576px)", srcset="img/advantage_4_sm.jpg")
-										img(src="img/advantage_4.jpg", alt="")
-			//	/advantages
+			include blocks/advantages.pug
 
 			// productlines
 			.productlines
@@ -280,11 +241,38 @@ block content
 												li ландшафт
 												li элементы интерьера
 			//	/usage
+
+			// slider
+			.slider
+				.container 
+					.block-header
+						.block-header__block
+							h2.title Статьи и пресс–релизы
+							.block-header__num +19
+						.btn.btn--black Все новости
+					.slider__slider
+						#sliderArticles
+							.swiper-wrapper
+								.swiper-slide
+									+article('article_1.jpg', 'Обзор полимеров для трехмерной печати', 'Прочный, красивый, качественный и чрезвычайно простой в печати, но имеет невысокую температу...', '28 ноября, 2021', 'База знаний')
+								.swiper-slide
+									+article('article_2.jpg', 'Как используются 3D технологии в обучении', '3D-принтеры перестают быть уделом только профессионало или любителей, но и активно проникают в образоват...', '12 сентября, 2021', 'Статьи')
+								.swiper-slide
+									+article('article_3.jpg', '3D-печать: основные проблемы и способы...', 'Предлагаем вашему вниманию руководство, с помощью которого можно решить основные пробл...', '9 августа, 2021', 'Пресс-релизы')
+								.swiper-slide
+									+article('article_4.jpg', 'Прототипы для функциональных тестов', 'Как 3D-печать используется для изготовления прототипов, предназначенных для тестирования.', '25 июля, 2021', 'База знаний')
+								.swiper-slide
+									+article('article_1.jpg', 'Обзор полимеров для трехмерной печати', 'Прочный, красивый, качественный и чрезвычайно простой в печати, но имеет невысокую температу...', '28 ноября, 2021', 'База знаний')
+								.swiper-slide
+									+article('article_2.jpg', 'Как используются 3D технологии в обучении', '3D-принтеры перестают быть уделом только профессионало или любителей, но и активно проникают в образоват...', '12 сентября, 2021', 'Статьи')
+							.swiper-pagination.slider__pagination
+			//	/slider
 			
 		include blocks/footer.pug
 
 block js-libs
 	script(src="js/libs/jquery.min.js")
+	script(src="js/libs/swiper-bundle.min.js") 
 	//- script(src="js/libs/jquery.fancybox.min.js")
 	//- script(src="js/libs/slick.min.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")

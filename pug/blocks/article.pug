@@ -1,0 +1,12 @@
+mixin article(img, title, text, date, name)
+  // article
+  a(href="#").article
+    .article__img 
+      img(src="img/" + img, alt="")
+    .article__content 
+      h3.article__title= title
+      p.article__text= text
+    ul.article__list
+      li= date
+      li= name
+  //	/article
