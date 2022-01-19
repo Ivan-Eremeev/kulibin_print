@@ -1,0 +1,225 @@
+.usage {
+  padding: 120px 0;
+  background-color: #fff;
+  .title {
+    margin-bottom: 64px;
+  }
+  &__item {
+    height: 100%;
+    padding: 46px 56px;
+    border-radius: 18px;
+    &--1 {
+      background-color: #E7DDD0;
+      .usage__img {
+        width: calc(100% + 120px);
+        margin-left: -88px;
+        margin-bottom: 42px;
+        img {
+          margin-top: -100px;
+        }
+      }
+    }
+    &--2 {
+      display: flex;
+      background-color: #E1E5E7;
+      .usage__img {
+        width: 330px;
+        flex-shrink: 0;
+        img {
+          max-width: none;
+          width: 130%;
+          position: absolute;
+          top: -72px;
+          right: -100px;
+        }
+      }
+    }
+    &--3 {
+      background-color: #E1E5E7;
+      .usage__img {
+        height: 175px;
+        margin-bottom: 35px;
+        img {
+          margin-top: -70px;
+        }
+      }
+    }
+    &--4 {
+      background-color: #262933;
+      .usage__img {
+        height: 175px;
+        margin-bottom: 35px;
+        img {
+          margin-top: -70px;
+        }
+      }
+      .usage__title {
+        color: #fff;
+      }
+      .usage__text {
+        color: #B1B2B6;
+      }
+      .usage__list {
+        li {
+          background-color: #40434B;
+        }
+      }
+    }
+  }
+  &__img {
+    position: relative;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 18px;
+  }
+  &__text {
+    font-size: 18px;
+    // line-height: 28px;
+    color: #565859;
+    margin-bottom: 32px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -6px;
+    font-size: 15px;
+    line-height: 18px;
+    li {
+      padding: 8px 18px 9px;
+      margin: 4px 0 4px 6px;
+      background: rgba(255, 255, 255, 0.56);
+      border-radius: 40px;
+      color: #838484;
+      white-space: nowrap;
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    padding: 100px 0;
+    .title {
+      margin-bottom: 46px;
+    }
+    &__item {
+      &--1 {
+        display: flex;
+        .usage__img {
+          width: 330px;
+          flex-shrink: 0;
+          margin-bottom: -46px;
+          img {
+            width: 100%;
+            max-width: none;
+            position: absolute;
+            margin-top: 0;
+            top: -86px;
+          }
+        }
+        .usage__content  {
+          padding-left: 100px;
+        }
+      }
+      &--2 {
+        
+      }
+      &--3 {
+        .usage__img {
+          margin-bottom: 50px;
+        }
+      }
+      &--4 {
+        .usage__img {
+          margin-bottom: 50px;
+        }
+      }
+    }
+    &__title {
+      margin-bottom: 16px;
+    }
+    &__text {
+      margin-bottom: 22px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__item {
+      padding: 0;
+      &--1 {
+        display: block;
+        .usage__img {
+          width: auto;
+          margin-left: 0;
+          margin-bottom: 55px;
+          img {
+            width: auto;
+            max-width: 80%;
+            margin-top: -40px;
+            position: static;
+            top: auto;
+          }
+        }
+        .usage__content {
+          padding-left: 0;
+        }
+      }
+      &--2 {
+        flex-wrap: wrap;
+        .usage__img {
+          width: 100%;
+          order: 1;
+          padding-top: 30px;
+          margin-bottom: 67px;
+          img {
+            width: auto;
+            max-width: 90%;
+            position: static;
+          }
+        }
+        .usage__content {
+          order: 2;
+        }
+      }
+      &--3 {
+        padding-top: 64px;
+        .usage__img {
+          margin-bottom: 70px;
+          img {
+            margin-top: 0;
+          }
+        }
+      }
+      &--4 {
+        padding-top: 65px;
+        .usage__img {
+          margin-bottom: 70px;
+          img {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    .usage__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-height: 100%;
+      }
+    }
+    .usage__content {
+      padding: 0 32px 36px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding: 80px 0;
+    &__title {
+      font-size: 26px;
+      line-height: 31px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 32px;
+    }
+  }
+}

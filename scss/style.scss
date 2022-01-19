@@ -6,22 +6,30 @@ $grid-gutter-width: 20px; // Отступы между колонками
 $grid-columns: 12; // Колличество колонок
 $grid-breakpoints: ( // Брейкпоинты
 xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1600px
-  ) !default;
-  $container-max-widths: ( // Максимальная ширина контейнера
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1200px,
-  xxl: 1584px
-  ) !default;
-  $gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px,
+xxl: 1600px
+) !default;
+$container-max-widths: ( // Максимальная ширина контейнера
+sm: 540px,
+md: 720px,
+lg: 960px,
+xl: 1200px,
+xxl: 1584px
+) !default;
+$gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
+$gutters: (
+  0: 0,
+  1: $grid-gutter-width * 1,
+  2: $grid-gutter-width * 2,
+  3: $grid-gutter-width * 3,
+  4: $grid-gutter-width * 4,
+  5: $grid-gutter-width * 5,
+);
   
-  @import 'bootstrap/bootstrap'; // Подключение бутстрап
+@import 'bootstrap/bootstrap'; // Подключение бутстрап
   
 @include reset(); // Сброс стилей
 
@@ -50,6 +58,8 @@ $redHov: #F83F60;
 @import 'blocks/welcome';
 @import 'blocks/video';
 @import 'blocks/advantages';
+@import 'blocks/productlines';
+@import 'blocks/usage';
 // @import 'blocks/accordion';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';
