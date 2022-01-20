@@ -28,6 +28,14 @@ $gutters: (
   4: $grid-gutter-width * 4,
   5: $grid-gutter-width * 5,
 );
+$spacers: (
+  0: 0,
+  1: $grid-gutter-width * 1,
+  2: $grid-gutter-width * 2,
+  3: $grid-gutter-width * 3,
+  4: $grid-gutter-width * 4,
+  5: $grid-gutter-width * 5,
+);
   
 @import 'bootstrap/bootstrap'; // Подключение бутстрап
   
@@ -62,6 +70,8 @@ $redHov: #F83F60;
 @import 'blocks/usage';
 @import 'blocks/slider';
 @import 'blocks/article';
+@import 'blocks/callback';
+@import 'blocks/footer';
 // @import 'blocks/accordion';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';

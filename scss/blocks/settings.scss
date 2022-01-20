@@ -101,8 +101,13 @@ body {
 .content {
   flex-grow: 1;
   // padding-top: 160px;
+  padding-bottom: 120px;
   @include media-breakpoint-down(xxl) {
     // padding-top: 140px;
+    padding-bottom: 100px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-bottom: 80px;
   }
 }
 .btn {
@@ -156,6 +161,12 @@ body {
       line-height: 19px;
     }
   }
+  @include media-breakpoint-down(md) {
+    &--big {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
 }
 .title {
   font-size: 48px;
@@ -198,6 +209,11 @@ body {
     }
   }
   @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+    &__block {
+      width: 100%;
+      margin-bottom: 24px;
+    }
     &__num {
       font-size: 16px;
       line-height: 19px;
@@ -205,6 +221,7 @@ body {
   }
 }
 .swiper-pagination-bullet {
+  margin: 0 8px !important;
   background-color: #C8CED0;
   opacity: 1;
 }

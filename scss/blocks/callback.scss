@@ -1,0 +1,151 @@
+.callback {
+  &__block {
+    padding: 56px 64px;
+    background: linear-gradient(96.9deg, #D9DEE0 7.5%, #CED2D5 92.39%);
+    border-radius: 18px;
+    position: relative;
+  }
+  &__img {
+    width: 1025px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    img {
+      margin-top: -45px;
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+  &__title {
+    max-width: 420px;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 24px;
+  }
+  &__text {
+    max-width: 460px;
+    font-size: 18px;
+    line-height: 26px;
+    color: #808384;
+    margin-bottom: 36px;
+  }
+  &__form {
+    display: flex;
+    .btn {
+      width: 320px;
+      margin-left: 16px;
+    }
+  }
+  &__input {
+    width: 320px;
+    input {
+      width: 100%;
+      padding: 22px 24px;
+      background: #F4F7F9;
+      border-radius: 16px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      &::placeholder {
+        color: #808384;
+      }
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    &__img {
+      width: 715px;
+      top: 16px;
+      img {
+        margin-top: 0;
+      }
+    }
+    &__title {
+      font-size: 32px;
+      line-height: 38px;
+    }
+    &__text {
+      margin-bottom: 46px;
+    }
+    &__form {
+      .btn {
+        width: 300px;
+      }
+    }
+    &__input {
+      width: 300px;
+      input {
+        padding: 18px 24px;
+      }
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__img {
+      width: 600px;
+      top: 30px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    overflow: hidden;
+    &__img {
+      right: -190px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__block {
+      padding: 42px 0 0;
+      overflow: hidden;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 18px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 32px;
+    }
+    &__img {
+      width: auto;
+      height: 270px;
+      position: relative;
+      top: auto;
+      right: auto;
+      img {
+        max-width: none;
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,0);
+      }
+    }
+    &__content {
+      padding: 0 32px 56px;
+    }
+    &__form {
+      flex-wrap: wrap;
+      .btn {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+    &__input {
+      width: 100%;
+      margin-bottom: 16px;
+      input {
+        font-size: 15px;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__img {
+      img {
+        left: 35%;
+      }
+    }
+  }
+}

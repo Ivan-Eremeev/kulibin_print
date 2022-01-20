@@ -57,4 +57,21 @@
       }
     }
   }
+  @include media-breakpoint-down(md) {
+    &__img {
+      height: 220px;
+    }
+    &__content {
+      padding: 28px 10px 0;
+    }
+    &__title {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 16px;
+    }
+    &__list {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
 }

@@ -770,6 +770,7 @@ $(document).ready(function () {
 	}
 	replace($('#propertyReplace'), $('#propertyTo'), $('#propertyFrom'), breakMd);
 	replace($('#propertyReplace2'), $('#propertyTo2'), $('#propertyFrom2'), breakMd);
+	replace($('#socialReplace'), $('#socialTo'), $('#socialFrom'), breakSm);
 
 	// Видео youtube
 	// $(function () {
@@ -836,6 +837,8 @@ $(document).ready(function () {
 	const sliderArticles = new Swiper('#sliderArticles', {
 		slidesPerView: 1,
 		spaceBetween: 20,
+		loop: true,
+		autoplay: true,
 		pagination: {
 			el: '.slider__pagination',
 			clickable: true,
@@ -852,5 +855,16 @@ $(document).ready(function () {
 			}
 		}
 	});
+
+	// Выпадающее меню в footer
+	function footerMenu() {
+		let childin = $('.footer__childin');
+		childin.children('a').on('click', function (e) {
+			e.preventDefault();
+			let dropmenu = $(this).siblings('.footer__sublist');
+			dropmenu.stop().slideToggle();
+		})
+	}
+	footerMenu();
 
 });
