@@ -771,6 +771,8 @@ $(document).ready(function () {
 	replace($('#propertyReplace'), $('#propertyTo'), $('#propertyFrom'), breakMd);
 	replace($('#propertyReplace2'), $('#propertyTo2'), $('#propertyFrom2'), breakMd);
 	replace($('#socialReplace'), $('#socialTo'), $('#socialFrom'), breakSm);
+	replace($('#postBlockReplace'), $('#postBlockTo'), $('#postBlockFrom'), breakMd);
+	replace($('#postSidebarReplace'), $('#postSidebarTo'), $('#postSidebarFrom'), breakMd);
 
 	// Видео youtube
 	// $(function () {

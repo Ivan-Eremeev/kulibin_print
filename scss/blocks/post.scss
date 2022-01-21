@@ -80,7 +80,12 @@
     
   }
   &__link {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
     color: #000;
+    margin-bottom: 36px;
     &:hover {
       color: $red;
     }
@@ -89,22 +94,35 @@
     }
   }
   &__dateblock {
-
+    max-width: 260px;
+    padding: 28px 32px;
+    background-color: #E4E6E7;
+    border-radius: 8px;
+    margin-bottom: 36px;
   }
   &__daterow {
-
+    &:nth-child(1) {
+      margin-bottom: 36px;
+    }
   }
   &__datetitle {
-
+    font-size: 15px;
+    line-height: 18px;
+    color: #88898A;
+    margin-bottom: 6px;
   }
   &__datetext {
-
+    font-size: 16px;
+    line-height: 19px;
   }
   &__social {
 
   }
   &__socialtitle {
-
+    font-size: 15px;
+    line-height: 18px;
+    color: #88898A;
+    margin-bottom: 16px;
   }
   &__sociallist {
     display: flex;
@@ -114,6 +132,7 @@
     }
     a {
       svg {
+        width: 28px;
         fill: #C1C2C3;
         transition: 0.2s;
       }
@@ -122,6 +141,58 @@
           fill: $red;
         }
       }
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    padding: 100px 0;
+    &__title {
+      font-size: 40px;
+    }
+    &__content {
+      img {
+        height: 450px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__hashtags {
+      margin-bottom: 32px;
+    }
+    &__social {
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #D6D8D9;
+    }
+    &__link {
+      margin-bottom: 0;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding: 80px 0;
+    &__title {
+      font-size: 28px;
+      line-height: 34px;
+    }
+    &__content {
+      padding-bottom: 0;
+      margin-bottom: 22px;
+      h1, h2 ,h3 ,h4, h5, h6 {
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 32px;
+        margin-bottom: 16px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 28px;
+      }
+      img {
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+    }
+    &__dateblock {
+      max-width: none;
     }
   }
 }
