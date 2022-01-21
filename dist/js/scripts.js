@@ -834,34 +834,38 @@ $(document).ready(function () {
 	youtubeInsert();
 
 	// swiper sliderArticles
-	const sliderArticles = new Swiper('#sliderArticles', {
-		slidesPerView: 1,
-		spaceBetween: 20,
-		loop: true,
-		autoplay: true,
-		pagination: {
-			el: '.slider__pagination',
-			clickable: true,
-		},
-		breakpoints: {
-			1600: {
-				slidesPerView: 4,
+	if ($('#sliderArticles').length) {
+		const sliderArticles = new Swiper('#sliderArticles', {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			loop: true,
+			autoplay: true,
+			pagination: {
+				el: '.slider__pagination',
+				clickable: true,
 			},
-			992: {
-				slidesPerView: 3,
-			},
-			768: {
-				slidesPerView: 2,
+			breakpoints: {
+				1600: {
+					slidesPerView: 4,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				768: {
+					slidesPerView: 2,
+				}
 			}
-		}
-	});
+		});
+	}
 
 	// Выпадающее меню в footer
 	function footerMenu() {
 		let childin = $('.footer__childin');
 		childin.children('a').on('click', function (e) {
 			e.preventDefault();
-			let dropmenu = $(this).siblings('.footer__sublist');
+			let $this = $(this);
+					dropmenu = $(this).siblings('.footer__sublist');
+			$this.toggleClass('active');
 			dropmenu.stop().slideToggle();
 		})
 	}

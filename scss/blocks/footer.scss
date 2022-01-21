@@ -40,16 +40,23 @@
   &__list {
     font-size: 18px;
     line-height: 18px;
-    margin-top: -24px;
-    li {
-      margin-top: 24px;
-    }
-    a {
-      color: #fff;
+    margin-top: -10px;
+    > li {
+      margin-top: 10px;
+      > a {
+        display: inline-block;
+        padding: 7px 30px 9px 16px;
+        border-radius: 32px;
+        color: #fff;
+        &:hover {
+          background-color: #545555;
+        }
+      }
     }
   }
   &__sublist {
     display: none;
+    padding-left: 16px;
     font-size: 16px;
     line-height: 18px;
     li {
@@ -123,6 +130,26 @@
       margin: 10px 0;
       padding-left: 64px;
       white-space: nowrap;
+    }
+  }
+  &__childin {
+    > a {
+      padding: 7px 30px 9px 16px;
+      position: relative;
+      svg {
+        margin-left: 5px;
+        fill: #B8B9BA;
+        transition: 0.2s;
+        position: absolute;
+        top: 10px;
+        right: 8px;
+      }
+      &:hover, &.active {
+        background-color: #545555;
+        svg {
+          fill: $red;
+        }
+      }
     }
   }
   @include media-breakpoint-down(xxl) {

@@ -14495,16 +14495,23 @@ body.lock {
 .footer__list {
   font-size: 18px;
   line-height: 18px;
-  margin-top: -24px;
+  margin-top: -10px;
 }
-.footer__list li {
-  margin-top: 24px;
+.footer__list > li {
+  margin-top: 10px;
 }
-.footer__list a {
+.footer__list > li > a {
+  display: inline-block;
+  padding: 7px 30px 9px 16px;
+  border-radius: 32px;
   color: #fff;
+}
+.footer__list > li > a:hover {
+  background-color: #545555;
 }
 .footer__sublist {
   display: none;
+  padding-left: 16px;
   font-size: 16px;
   line-height: 18px;
 }
@@ -14586,6 +14593,26 @@ body.lock {
   margin: 10px 0;
   padding-left: 64px;
   white-space: nowrap;
+}
+.footer__childin > a {
+  padding: 7px 30px 9px 16px;
+  position: relative;
+}
+.footer__childin > a svg {
+  margin-left: 5px;
+  fill: #B8B9BA;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  position: absolute;
+  top: 10px;
+  right: 8px;
+}
+.footer__childin > a:hover, .footer__childin > a.active {
+  background-color: #545555;
+}
+.footer__childin > a:hover svg, .footer__childin > a.active svg {
+  fill: #D83A56;
 }
 @media (max-width: 1599.98px) {
   .footer__row {
