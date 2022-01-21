@@ -228,4 +228,27 @@ body {
 .swiper-pagination-bullet-active {
   background-color: $red;
 }
+.navpage {
+  padding: 120px 0;
+  &__title {
+    font-size: 24px;
+  }
+  &__list {
+    li {
+      margin: 10px 0;
+    }
+    a {
+      color: #000;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    padding: 100px 0;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 80px 0;
+  }
+}
 /* /settings */

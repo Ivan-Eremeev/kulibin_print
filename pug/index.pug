@@ -24,11 +24,15 @@ block content
 		.content
 			.container
 
-				ul 
-					li 
-						a(href="main.html") Главная
-					li 
-						a(href="post.html") Страница статьи
+				.navpage
+					.navpage__title Навигация по страницам
+					ul.navpage__list
+						li 
+							a(href="main.html") Главная
+						li 
+							a(href="post.html") Страница статьи
+						li 
+							a(href="news.html") Новости
 			
 		include blocks/footer.pug
 
