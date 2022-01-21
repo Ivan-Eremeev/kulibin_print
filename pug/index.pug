@@ -4,6 +4,7 @@ block title
 	title Навигация по страницам
 
 block style-libs
+	//- link(rel="stylesheet", href="css/libs/swiper-bundle.min.css")
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
 	//- link(rel="stylesheet", href="css/libs/fullpage.css")
 	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
@@ -26,11 +27,14 @@ block content
 				ul 
 					li 
 						a(href="main.html") Главная
+					li 
+						a(href="post.html") Страница статьи
 			
 		include blocks/footer.pug
 
 block js-libs
 	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/swiper-bundle.min.js") 
 	//- script(src="js/libs/jquery.fancybox.min.js")
 	//- script(src="js/libs/slick.min.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")
