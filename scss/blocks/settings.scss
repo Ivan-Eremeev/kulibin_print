@@ -251,4 +251,77 @@ body {
     padding: 80px 0;
   }
 }
+.select {
+  .jq-selectbox {
+    width: 100%;
+    &.focused {
+      .jq-selectbox__select {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+  .jq-selectbox__select {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: 13px 24px;
+    background: #F4F7F9;
+    border: none;
+    box-shadow: none;
+    border-radius: 16px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .jq-selectbox__trigger {
+    display: none;
+  }
+  .jq-selectbox__dropdown {
+    padding: 10px 24px;
+    background: #F4F7F9;
+    border: none;
+    box-shadow: none;
+    border-radius: 16px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .jspVerticalBar {
+    width: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: transparent;
+  }
+  .jspTrack {
+    background: #C8CBCC;
+  }
+  .jspDrag {
+    background: #919394;
+    border-radius: 4px;
+  }
+  .jq-selectbox {
+    li {
+      .sel {
+        background-color: #D2D3D4;
+      }
+      &:hover {
+        background-color: #D2D3D4;
+      }
+    }
+  }
+  &__label {
+    font-size: 13px;
+    line-height: 16px;
+    color: #919394;
+    position: absolute;
+    top: 13px;
+    left: 24px;
+    z-index: 10;
+  }
+  &--label {
+    position: relative;
+    .jq-selectbox__select {
+      align-items: flex-end;
+    }
+  }
+}
 /* /settings */

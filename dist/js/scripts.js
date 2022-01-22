@@ -873,4 +873,29 @@ $(document).ready(function () {
 	}
 	footerMenu();
 
+	// Селекты
+	function formStyleSelect() {
+		if ($('.select select').length) {
+			var _dropdown;
+			var settings = { autoReinitialise: true };
+			$('.select select').styler({
+				selectPlaceholder: '',
+				selectVisibleOptions: 8,
+				onFormStyled: function () {
+					_dropdown = $('.jq-selectbox__dropdown');
+					_dropdown.find('ul').wrap('<div class="scroll-pane"/>');
+				},
+				onSelectOpened: function () {
+					var _ul = $(this).find('.jq-selectbox__dropdown ul');
+					var height = _ul.height();
+					var _srollPane = _dropdown.find('.scroll-pane');
+					_srollPane.height(height);
+					_ul.css('max-height', 'none');
+					_srollPane.jScrollPane(settings);
+				}
+			});
+		}
+	}
+	formStyleSelect();
+
 });
