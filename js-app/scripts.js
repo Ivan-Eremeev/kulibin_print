@@ -19,7 +19,7 @@ $(document).ready(function () {
 	// libs-settings/tinyscrollbar-settings.js
 	// libs-settings/tooltipster-settings.js
 	// libs-settings/yandex-map-settings.js
-	// libs-settings/google-map-settings.js
+	//= libs-settings/google-map-settings.js
 	// mailto-ajax.js
 
 	// Запрет перехода по ссылкам с хэшем
@@ -860,6 +860,29 @@ $(document).ready(function () {
 		});
 	}
 
+	// swiper sliderDillers
+	if ($('#sliderDillers').length) {
+		const sliderDillers = new Swiper('#sliderDillers', {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			pagination: {
+				el: '.dillers__pagination',
+				clickable: true,
+			},
+			breakpoints: {
+				1600: {
+					slidesPerView: 4,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				768: {
+					slidesPerView: 2,
+				}
+			}
+		});
+	}
+
 	// Выпадающее меню в footer
 	function footerMenu() {
 		let childin = $('.footer__childin');
@@ -897,5 +920,19 @@ $(document).ready(function () {
 		}
 	}
 	formStyleSelect();
+
+	// Скопировать текст в буфер при клике
+	function copyText() {
+		var successBlock = $('<div class="success">Скопировано</div>');
+		$('body').prepend(successBlock);
+		$('body').on('click', '.copy-text', function () {
+			navigator.clipboard.writeText($(this).text());
+			successBlock.addClass('open');
+			setTimeout(function () {
+				successBlock.removeClass('open');
+			}, 1000)
+		})
+	}
+	copyText();
 
 });

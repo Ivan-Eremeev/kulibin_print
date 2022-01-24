@@ -1,0 +1,12 @@
+.map {
+  &__map {
+    height: 420px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  @include media-breakpoint-down(md) {
+    &__map {
+      height: 360px;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.contact {
+  padding: 120px 0;
+  .title {
+    margin-bottom: 80px;
+  }
+  &__title {
+    font-size: 16px;
+    line-height: 19px;
+    color: #8B8C8C;
+    margin-bottom: 12px;
+  }
+  &__text {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 30px;
+  }
+  &__table {
+    table {
+      width: 100%;
+      max-width: 400px;
+      font-size: 16px;
+      line-height: 18px;
+      tr {
+        
+      }
+      td {
+        padding: 6px 0;
+        &:nth-child(1) {
+          color: #8B8C8C;
+        }
+        &:nth-child(2) {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+  &__copy {
+    display: inline-block;
+    position: relative;
+    padding-right: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+    &:after {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.24'%3E%3Cpath d='M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z' stroke='%23080809' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.0001 6.00008V3.06675C10.0001 2.84583 9.82101 2.66675 9.60008 2.66675H3.06675C2.84583 2.66675 2.66675 2.84583 2.66675 3.06675V9.60008C2.66675 9.82101 2.84583 10.0001 3.06675 10.0001H6.00008' stroke='%23080809' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E%0A");
+      position: absolute;
+      top: 2px;
+      right: 0;
+    }
+    &:hover {
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  &__row {
+    margin-top: -36px;
+  }
+  &__block {
+    margin-top: 36px;
+  }
+  &__link {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 50px;
+    a {
+      color: #000;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  &__btn {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 16px;
+    color: $red;
+    border-bottom: 1px solid #CED0D1;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+  }
+  &__map {
+
+  }
+  @include media-breakpoint-down(xxl) {
+    padding: 100px 0;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 40px 0;
+    .title {
+      margin-bottom: 42px;
+    }
+    &__title {
+      margin-bottom: 8px;
+    }
+    &__text {
+      font-size: 22px;
+      line-height: 28px;
+      margin-bottom: 24px;
+    }
+    &__table {
+      table {
+        tr {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 3px 0;
+        }
+        td {
+          width: 100%;
+          padding: 0;
+          &:nth-child(2) {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    &__row {
+      margin-top: -24px;
+    }
+    &__block {
+      margin-top: 24px;
+    }
+    &__btn {
+      margin-top: 12px;
+    }
+    &__link {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}

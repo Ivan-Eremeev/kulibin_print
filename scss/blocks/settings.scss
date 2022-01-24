@@ -20,7 +20,7 @@ textarea {
   }
 }
 body {
-  height: 100%;
+  min-height: 100%;
   min-width: 319px;
   background-color: #E5E5E5;
   font-family: "RFDewi", sans-serif;
@@ -295,6 +295,7 @@ body {
     border-radius: 16px;
     font-size: 16px;
     line-height: 19px;
+    box-shadow: 0px 185px 170px rgba(0, 0, 0, 0.04), 0px 119.907px 99.5602px rgba(0, 0, 0, 0.0303704), 0px 71.2593px 54.1481px rgba(0, 0, 0, 0.0242963), 0px 37px 27.625px rgba(0, 0, 0, 0.02), 0px 15.0741px 13.8519px rgba(0, 0, 0, 0.0157037), 0px 3.42593px 6.68982px rgba(0, 0, 0, 0.00962963);
   }
   .jspVerticalBar {
     width: 4px;
@@ -341,6 +342,22 @@ body {
     &__label {
       top: 11px;
     }
+  }
+}
+.success {
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translate(-50%,0);
+  transition: 0.5s;
+  z-index: 12;
+  box-shadow: 0px 185px 170px rgba(0, 0, 0, 0.04), 0px 119.907px 99.5602px rgba(0, 0, 0, 0.0303704), 0px 71.2593px 54.1481px rgba(0, 0, 0, 0.0242963), 0px 37px 27.625px rgba(0, 0, 0, 0.02), 0px 15.0741px 13.8519px rgba(0, 0, 0, 0.0157037), 0px 3.42593px 6.68982px rgba(0, 0, 0, 0.00962963);
+  border: 1px solid green;
+  &.open {
+    top: 50px;
   }
 }
 /* /settings */

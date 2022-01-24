@@ -1,0 +1,80 @@
+.dillercard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 32px;
+  background: #FFFFFF;
+  border-radius: 18px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #EBEBEB;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 8px;
+  }
+  &__text {
+    flex-grow: 1;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
+  &__btn {
+    font-size: 16px;
+    line-height: 19px;
+    color: $red;
+    span {
+      border-bottom: 1px solid #EBEBEB;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+  &__info {
+    padding-top: 24px;
+  }
+  &__row {
+    margin-top: -20px;
+  }
+  &__infoblock {
+    margin-top: 20px;
+  }
+  &__name {
+    font-size: 16px;
+    line-height: 19px;
+    color: #979797;
+    margin-bottom: 6px;
+  }
+  &__link {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+    white-space: nowrap;
+  }
+  @include media-breakpoint-down(md) {
+    &__title {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 8px;
+    }
+    &__text {
+      font-size: 15px;
+      line-height: 22px;
+    }
+    &__btn {
+      font-size: 15px;
+      line-height: 18px;
+    }
+    &__row {
+      margin-top: -18px;
+    }
+    &__infoblock {
+      margin-top: 18px;
+    }
+  }
+}
