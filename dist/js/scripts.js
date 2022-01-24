@@ -201,7 +201,9 @@ $(document).ready(function () {
 	  //   infowindow.open(map, marker);
 	  // });
 	}
-	initGoogleMap();
+	if ($('#googleMap').length) {
+	  initGoogleMap();
+	}
 	// mailto-ajax.js
 
 	// Запрет перехода по ссылкам с хэшем
@@ -955,6 +957,7 @@ $(document).ready(function () {
 	replace($('#socialReplace'), $('#socialTo'), $('#socialFrom'), breakSm);
 	replace($('#postBlockReplace'), $('#postBlockTo'), $('#postBlockFrom'), breakMd);
 	replace($('#postSidebarReplace'), $('#postSidebarTo'), $('#postSidebarFrom'), breakMd);
+	replace($('#aboutBlockReplace'), $('#aboutBlockTo'), $('#aboutBlockFrom'), breakMd);
 
 	// Видео youtube
 	// $(function () {

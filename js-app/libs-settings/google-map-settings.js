@@ -180,4 +180,6 @@ function initGoogleMap() {
   //   infowindow.open(map, marker);
   // });
 }
-initGoogleMap();
+if ($('#googleMap').length) {
+  initGoogleMap();
+}

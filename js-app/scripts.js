@@ -773,6 +773,7 @@ $(document).ready(function () {
 	replace($('#socialReplace'), $('#socialTo'), $('#socialFrom'), breakSm);
 	replace($('#postBlockReplace'), $('#postBlockTo'), $('#postBlockFrom'), breakMd);
 	replace($('#postSidebarReplace'), $('#postSidebarTo'), $('#postSidebarFrom'), breakMd);
+	replace($('#aboutBlockReplace'), $('#aboutBlockTo'), $('#aboutBlockFrom'), breakMd);
 
 	// Видео youtube
 	// $(function () {

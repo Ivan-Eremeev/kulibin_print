@@ -1,0 +1,137 @@
+extends blocks/base.pug
+
+block title 
+	title О компании
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/swiper-bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/aos.css")
+
+block content
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+			
+			// welcomeabout
+			.welcomeabout
+				.container
+					.welcomeabout__content 
+						.welcomeabout__desc О проекте
+						h1.welcomeabout__title Проектируем и разрабатываем продукты в области 
+							span аддитивного производства 
+							| отличающиеся простотой и эффективностью
+					.welcomeabout__img 
+						picture 
+							source(media="(max-width: 758px)", srcset="img/about_sm.svg")
+							img(src="img/about.png", alt="")
+					.welcomeabout__line
+			//	/welcomeabout
+
+			// about
+			.about
+				.container 
+					.row 
+						.col-xxl-5.col-lg-6 
+							#aboutBlockFrom
+								#aboutBlockReplace.about__blockrow
+									.about__block.about__block--1
+										.about__blcoktitle 
+											span 2 
+											| модели
+										.about__blocktext выпущены в 2022 году
+									.about__block.about__block--2
+										.about__blcoktitle 
+											span 16 
+											| сотрудников
+										.about__blocktext в штате нашей компании
+									.about__block.about__block--3
+										.about__blcoktitle 
+											span 3 
+											| года
+										.about__blocktext на рынке
+									.about__block.about__block--4
+										.about__blcoktitle 
+											span 200+ 
+											| дилеров
+										.about__blocktext продукции по всему миру
+						.col-xxl-6.col-lg-6
+							h2.about__title Расширяем доступ к цифровому производству
+							#aboutBlockTo
+							.about__text Мы уже давно прошли век корпораций и крупных фабрик, владеющих всеми производственными ресурсами. Возможность купить 3D принтер позволяет нам с вами производить свои собственные изделия в любом количестве и в любом месте.
+							.about__items
+								.about__itemsrow
+									.about__item
+										.about__icon 
+											img(src="img/tooth.svg", alt="")
+										.about__itemtitle Стоматология
+										.about__itemtext Производите стоматологические продукты наивысшего нового стандарта качества, избежав при этом  значительных затрат.
+									.about__item
+										.about__icon 
+											img(src="img/car.svg", alt="")
+										.about__itemtitle Автомобилестроение
+										.about__itemtext Используйте на этапе разработки и создавайте изделия более высокого качества дешевле и быстрее.
+									.about__item
+										.about__icon 
+											img(src="img/box.svg", alt="")
+										.about__itemtitle Прототипирование
+										.about__itemtext Перед запуском нового изделия в производство проводят тестирование опытного прототипа.
+									.about__item
+										.about__icon 
+											img(src="img/design.svg", alt="")
+										.about__itemtitle Дизайн
+										.about__itemtext В архитектуре и дизайне трехмерные принтеры успешно применяются в основном для создания архитектурных макетов.
+			//	/about
+
+			// halfitems
+			.halfitems
+				.container
+					.row.gy-4
+						.col-lg-6
+							a(href="#").halfitems__item 
+								.halfitems__content
+									.halfitems__title Наличие испытательной и исследовательской лаборатории
+									.halfitems__text Все продукты проходят лабораторные испытания и постоянно совершенствуются, так же разрабатываются новые модели.
+								.halfitems__img 
+									img(src="img/halfitems_1.png", alt="")
+						.col-lg-6
+							a(href="#").halfitems__item 
+								.halfitems__content
+									.halfitems__title Собственное производство
+									.halfitems__text Собственное производство позволяет нам не только сохранять отличное качество продукции, но и обеспечивать доступные цены.
+								.halfitems__img 
+									img(src="img/halfitems_2.png", alt="")
+			//	/halfitems
+
+			include blocks/callback.pug
+			
+		include blocks/footer.pug
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/swiper-bundle.min.js") 
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="js/libs/aos.js")
+	//- script(src="js/libs/circle-progress.min.js")
+	//- script(src="js/libs/bootstrap.bundle.min.js") 
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")
