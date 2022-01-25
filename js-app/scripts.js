@@ -883,6 +883,50 @@ $(document).ready(function () {
 			}
 		});
 	}
+	
+	// swiper sliderInnovation1
+	if ($('#sliderInnovation1').length) {
+		const sliderInnovation1 = new Swiper('#sliderInnovation1', {
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			loop: true,
+			autoplay: {
+				delay: 1,
+				disableOnInteraction: false
+			},
+			speed: 5000,
+			allowTouchMove: false,
+		})
+	}
+	// swiper sliderInnovation2
+	if ($('#sliderInnovation2').length) {
+		const sliderInnovation2 = new Swiper('#sliderInnovation2', {
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			loop: true,
+			autoplay: {
+				delay: 1,
+				disableOnInteraction: false
+			},
+			speed: 6000,
+			centeredSlides: true,
+			allowTouchMove: false,
+		})
+	}
+	// swiper sliderInnovation3
+	if ($('#sliderInnovation3').length) {
+		const sliderInnovation3 = new Swiper('#sliderInnovation3', {
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			loop: true,
+			autoplay: {
+				delay: 1,
+				disableOnInteraction: false
+			},
+			speed: 5000,
+			allowTouchMove: false,
+		})
+	}
 
 	// Выпадающее меню в footer
 	function footerMenu() {

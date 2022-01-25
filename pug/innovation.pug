@@ -1,0 +1,152 @@
+extends blocks/base.pug
+
+block title 
+	title Инновации
+
+block style-libs
+	link(rel="stylesheet", href="css/libs/swiper-bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/aos.css")
+
+block content
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+			
+			// innovation
+			.innovation
+				.container
+					h1.title Инновации
+					p.innovation__text Мы уже давно прошли век корпораций и крупных фабрик, владеющих всеми производственными ресурсами. Возможность купить 3D принтер позволяет нам с вами производить свои собственные изделия в любом количестве и в любом месте.
+					.innovation__sliders 
+						#sliderInnovation1
+							.swiper-wrapper
+								.swiper-slide
+									.innovation__item Доступное оборудование
+								.swiper-slide
+									.innovation__item Многообразие материалов
+								.swiper-slide
+									.innovation__item Снижение затрат
+								.swiper-slide
+									.innovation__item Персонализация
+								.swiper-slide
+									.innovation__item Сокращение отходов
+								.swiper-slide
+									.innovation__item Короткие сроки производства
+								.swiper-slide
+									.innovation__item Геометрическая свобода
+								.swiper-slide
+									.innovation__item Доступное производство
+								.swiper-slide
+									.innovation__item Экономическая выгода
+								.swiper-slide
+									.innovation__item Широкий спектр применения
+						#sliderInnovation2
+							.swiper-wrapper
+								.swiper-slide
+									.innovation__item Доступное оборудование
+								.swiper-slide
+									.innovation__item Многообразие материалов
+								.swiper-slide
+									.innovation__item Снижение затрат
+								.swiper-slide
+									.innovation__item Персонализация
+								.swiper-slide
+									.innovation__item Сокращение отходов
+								.swiper-slide
+									.innovation__item Короткие сроки производства
+								.swiper-slide
+									.innovation__item Геометрическая свобода
+								.swiper-slide
+									.innovation__item Доступное производство
+								.swiper-slide
+									.innovation__item Экономическая выгода
+								.swiper-slide
+									.innovation__item Широкий спектр применения
+						#sliderInnovation3
+							.swiper-wrapper
+								.swiper-slide
+									.innovation__item Широкий спектр применения
+								.swiper-slide
+									.innovation__item Экономическая выгода
+								.swiper-slide
+									.innovation__item Доступное производство
+								.swiper-slide
+									.innovation__item Геометрическая свобода
+								.swiper-slide
+									.innovation__item Короткие сроки производства
+								.swiper-slide
+									.innovation__item Сокращение отходов
+								.swiper-slide
+									.innovation__item Персонализация
+								.swiper-slide
+									.innovation__item Снижение затрат
+								.swiper-slide
+									.innovation__item Многообразие материалов
+								.swiper-slide
+									.innovation__item Доступное оборудование
+
+			//	/innovation
+
+			include blocks/advantages.pug
+
+			// halfitems
+			.halfitems
+				.container
+					h2.halfitems__title1 Перспективные технологии, над которыми мы работаем
+					.row.gy-4
+						.col-lg-6
+							a(href="#").halfitems__item 
+								.halfitems__content
+									.halfitems__title Печать без подготовки в 1 клик
+									.halfitems__text Больше не нужно подготавливать модель вручную. Наша система позволит печатать модели в один клик вне зависимости от навыков и умений оператора.
+								.halfitems__img 
+									img(src="img/halfitems_3.png", alt="")
+						.col-lg-6
+							a(href="#").halfitems__item
+								.halfitems__content
+									.halfitems__title Cистема блокчейн-контрактов
+									.halfitems__text Система для обмена, продажи, а также печати в один клик трехмерных моделей на платформе крипто токене Ethereum.
+								.halfitems__img 
+									img(src="img/halfitems_4.png", alt="")
+								.halfitems__circle
+									svg(width="216" height="174" viewBox="0 0 216 174" fill="none" xmlns="http://www.w3.org/2000/svg")
+										g(clip-path="url(#clip0_78_5977)")
+											circle(cx="119" cy="132" r="119" fill="#D83A56")
+										defs
+											clipPath(id="clip0_78_5977")
+												path(d="M0 0H216V158C216 166.837 208.837 174 200 174H0V0Z" fill="white")
+			//	/halfitems
+
+			include blocks/callback.pug
+			
+		include blocks/footer.pug
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	script(src="js/libs/swiper-bundle.min.js") 
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="js/libs/aos.js")
+	//- script(src="js/libs/circle-progress.min.js")
+	//- script(src="js/libs/bootstrap.bundle.min.js") 
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")

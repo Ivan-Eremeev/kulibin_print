@@ -1,5 +1,12 @@
 .halfitems {
   padding: 120px 0;
+  &__title1 {
+    max-width: 560px;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 56px;
+  }
   &__item {
     display: flex;
     align-items: center;
@@ -9,6 +16,7 @@
     border-radius: 16px;
     color: #000;
     transition: 0.5s;
+    position: relative;
     &:hover {
       box-shadow: 0px 80px 80px rgba(0, 0, 0, 0.03), 0px 51.8519px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 30.8148px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 16px 13px rgba(0, 0, 0, 0.015), 0px 6.51852px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.48148px 3.14815px rgba(0, 0, 0, 0.00722222);
     }
@@ -16,6 +24,8 @@
   &__content {
     width: 70%;
     padding: 42px 0 42px 56px;
+    position: relative;
+    z-index: 2;
   }
   &__title {
     font-weight: bold;
@@ -31,9 +41,19 @@
   &__img {
     width: 30%;
     flex-shrink: 0;
+    position: relative;
+    z-index: 2;
     img {
       margin-top: -100px;
     }
+  }
+  &__circle {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    text-align: right;
   }
   @include media-breakpoint-down(xxl) {
     padding: 100px 0;
@@ -47,6 +67,11 @@
   }
   @include media-breakpoint-down(md) {
     padding: 80px 0;
+    &__title1 {
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 64px;
+    }
     &__item {
       flex-direction: column;
       padding: 0;
@@ -63,6 +88,9 @@
       img {
         margin-top: -60px;
       }
+    }
+    &__circle {
+      display: none;
     }
   }
 }
