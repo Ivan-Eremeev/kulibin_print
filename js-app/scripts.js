@@ -988,5 +988,17 @@ $(document).ready(function () {
 		$('input[name="tel"]').inputmask("+7(999)999-99-99");
 	}
 
+	// Открыть скрытые символы в input passwod
+	function passwordVisible() {
+		$('.input--password .input__icon').on('click', function () {
+			var input = $(this).siblings('input');
+			if (input.attr('type') == 'password') {
+				input.attr('type', 'text');
+			}else {
+				input.attr('type', 'password');
+			}
+		})
+	}
+	passwordVisible();
 
 });

@@ -1,0 +1,139 @@
+.login {
+  padding-top: 100px;
+  &__block {
+    max-width: 376px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 24px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 28px;
+    color: #545555;
+    margin-bottom: 42px;
+  }
+  &__form {
+    .btn {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .input {
+      margin-bottom: 20px;
+    }
+  }
+  &__approval {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 36px;
+    color: #545555;
+    a {
+      color: $red;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        border-color: $red;
+      }
+    }
+  }
+  &__buttons {
+    display: none;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__checkboxblock {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #8B8C8C;
+    input {
+      display: none;
+      &:checked {
+        ~ .login__checkbox {
+          svg {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    label {
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+  &__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F4F7F9;
+    border-radius: 8px;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    svg {
+      opacity: 0;
+      transition: 0.1s;
+    }
+  }
+  &__link {
+    font-size: 15px;
+    line-height: 18px;
+    color: $red;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      color: $red;
+      border-color: $red;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 36px;
+    &__buttons {
+      display: block;
+      padding: 4px;
+      border-radius: 16px;
+      margin-bottom: 32px;
+      background-color: #DBDDDE;
+    }
+    &__buttons-row {
+      display: flex;
+      margin-left: -4px;
+    }
+    &__btn {
+      width: 50%;
+      padding-left: 4px;
+      .btn {
+        width: 100%;
+      }
+    }
+    &__title {
+      font-size: 28px;
+      line-height: 34px;
+    }
+    &__text {
+      line-height: 26px;
+      margin-bottom: 29px;
+    }
+    &__form {
+      .input {
+        margin-bottom: 16px;
+      }
+      .btn {
+        margin-top: 8px;
+      }
+    }
+    &__approval {
+      font-size: 15px;
+      line-height: 24px;
+      margin-top: 32px;
+    }
+  }
+}

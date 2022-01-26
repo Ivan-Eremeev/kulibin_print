@@ -1,5 +1,17 @@
 .footer {
   background-color: #1E1F20;
+  &--login {
+    background-color: #E5E5E5;
+    .footer__line {
+      background-color: #D7D9DA;
+    }
+    .footer__bottom {
+      color: #98999A;
+      p, a {
+        color: #98999A;
+      }
+    }
+  }
   &__row {
     padding: 120px 0;
   }
@@ -126,10 +138,11 @@
     padding: 25px 0;
     margin-left: -64px;
     color: #545555;
-    p {
+    p, a {
       margin: 10px 0;
       padding-left: 64px;
       white-space: nowrap;
+      color: #545555;
     }
   }
   &__childin {

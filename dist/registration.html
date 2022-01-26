@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>404</title>
+		<title>Навигация по страницам</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
@@ -160,7 +160,7 @@
 							<div class="header__tel nout-hide">
 								<p> <a href="tel:+79601863596">+7 960 186–35–96</a></p>
 								<p>
-									<div class="header__telback modal-trigger" data-bs-toggle="modal" data-bs-target="#modalCallback">Обратный звонок	</div>
+									<div class="header__telback">Обратный звонок	</div>
 								</p>
 							</div>
 							<div class="header__regbuttons"> <a class="btn btn--white" href="#">Вход</a><a class="btn btn--black" href="#">Регистрация</a>
@@ -298,23 +298,20 @@
 			</header>
 			<!-- /header-->
 			<div class="content">
-				<!-- block404-->
-				<div class="block404">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-lg-7">
-								<div class="block404__img"> <img src="img/404.png" alt=""></div>
-							</div>
-							<div class="col-lg-5">
-								<div class="block404__content"> 
-									<div class="block404__title">Страница не найдена</div>
-									<div class="block404__text">Запрашиваемая страница недоступна. Возможно она была удалена или её адрес был указан неверно.</div><a class="btn btn--red btn--big" href="#">Вернуться на главную</a>
-								</div>
-							</div>
-						</div>
+				<div class="container">
+					<div class="navpage">
+						<div class="navpage__title">Навигация по страницам</div>
+						<ul class="navpage__list">
+							<li> <a href="main.html">Главная</a></li>
+							<li> <a href="post.html">Страница статьи</a></li>
+							<li> <a href="news.html">Новости</a></li>
+							<li> <a href="contact.html">Контакты</a></li>
+							<li> <a href="about.html">О компании</a></li>
+							<li> <a href="innovation.html">Инновации</a></li>
+							<li> <a href="404.html">Страница 404</a></li>
+						</ul>
 					</div>
 				</div>
-				<!--	/block404-->
 			</div>
 			<!-- modal bootstrap-->
 			<div class="modal fade" id="modalCallback">

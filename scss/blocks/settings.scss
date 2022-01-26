@@ -149,6 +149,12 @@ body {
       color: #fff;
     }
   }
+  &--gray {
+    background-color: #E9EBEC;
+    &:hover {
+      background-color: #fff;
+    }
+  }
   &--big {
     padding: 21px 85px 23px;
     font-size: 17px;
@@ -364,7 +370,7 @@ body {
   position: relative;
   input {
     width: 100%;
-    padding: 32px 24px 13px;
+    padding: 22px 24px 23px;
     background: #F4F7F9;
     border-radius: 16px;
     border: none;
@@ -380,6 +386,36 @@ body {
     top: 16px;
     left: 24px;
     z-index: 2;
+  }
+  &__icon {
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    svg {
+      stroke: #9FA1A2;
+    }
+  }
+  &--label {
+    input {
+      padding: 32px 24px 13px;
+    }
+  }
+  &--password {
+    input {
+      padding: 22px 60px 23px 24px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    input {
+      padding: 20px 24px 21px;
+    }
+    &--label {
+      input {
+        padding: 30px 24px 11px;
+      }
+    }
   }
 }
 /* /settings */

@@ -231,6 +231,13 @@
       margin-left: 12px;
     }
   }
+  &__regbuttons-text {
+    font-size: 16px;
+    line-height: 19px;
+    color: #676768;
+    margin-right: 12px;
+    align-self: center;
+  }
   &__regicon {
     display: none;
   }
@@ -442,6 +449,9 @@
     &__dropmenu {
       width: 930px;
       padding: 56px 80px 56px 32px;
+    }
+    &__regbuttons-text {
+      display: none;
     }
   }
   @include media-breakpoint-down(lg) {
