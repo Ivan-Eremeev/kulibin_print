@@ -1,7 +1,7 @@
 extends blocks/base.pug
 
 block title 
-	title Навигация по страницам
+	title 404
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/swiper-bundle.min.css")
@@ -22,25 +22,22 @@ block content
 		include blocks/header.pug
 		
 		.content
-			.container
-
-				.navpage
-					.navpage__title Навигация по страницам
-					ul.navpage__list
-						li 
-							a(href="main.html") Главная
-						li 
-							a(href="post.html") Страница статьи
-						li 
-							a(href="news.html") Новости
-						li 
-							a(href="contact.html") Контакты
-						li 
-							a(href="about.html") О компании
-						li 
-							a(href="innovation.html") Инновации
-						li 
-							a(href="404.html") Страница 404
+			
+			// block404
+			.block404
+				.container
+					.row.align-items-center
+						.col-lg-7
+							.block404__img 
+								//- picture 
+									//- source(media="(max-width: 768px)", srcset="img/404_sm.png")
+								img(src="img/404.png", alt="")
+						.col-lg-5
+							.block404__content 
+								.block404__title Страница не найдена
+								.block404__text Запрашиваемая страница недоступна. Возможно она была удалена или её адрес был указан неверно.
+								a(href="#").btn.btn--red.btn--big Вернуться на главную
+			//	/block404
 			
 		include blocks/footer.pug
 

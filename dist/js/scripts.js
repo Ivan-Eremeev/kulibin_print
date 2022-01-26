@@ -258,7 +258,8 @@ $(document).ready(function () {
 		var $this = undefined,
 				drop = undefined,
 				header = $('.header__container'),
-				over = $('#menu-over');
+				over = $('#menu-over'),
+				modal = $('.modal');
 		btn.on('click', function () {
 			$this = $(this);
 			drop = $('#' + $this.data('drop'));
@@ -271,7 +272,9 @@ $(document).ready(function () {
 					&& !drop.is(e.target)
 					&& drop.has(e.target).length === 0
 					&& !header.is(e.target)
-					&& header.has(e.target).length === 0) {
+					&& header.has(e.target).length === 0
+					&& !modal.is(e.target)
+					&& modal.has(e.target).length === 0) {
 					$this.removeClass('active');
 					drop.removeClass('open');
 					header.removeClass('open');
@@ -395,7 +398,7 @@ $(document).ready(function () {
 
 	// // Модальное окно
 	// function modal(modal) {
-	// 	$('.modal-trigger').on('click', function() {
+	// 	$('.js-modal-trigger').on('click', function() {
 	// 		var $this = $(this),
 	// 				data = $this.data('modal'),
 	// 				thisModal = $(data);
@@ -1163,5 +1166,11 @@ $(document).ready(function () {
 		})
 	}
 	copyText();
+
+	// Маска для полей || Inputmask
+	if ($('input[name="tel"]').length) {
+		$('input[name="tel"]').inputmask("+7(999)999-99-99");
+	}
+
 
 });

@@ -1,3 +1,16 @@
+// modal bootstrap
+.modal.fade#modalCallback
+	.modal-dialog.modal-dialog-centered
+		form(action="#").modal-content
+			.modal__title Обратный звонок
+			.modal__text Укажите ваш номер и наш менеджер свяжется с вами для консультации
+			.input.input--label
+				input(type="text" name="tel")
+				.input__label Ваш номер
+			button(type="submit").btn.btn--red.btn--big Отправить заявку
+			.modal_close(data-bs-dismiss="modal")
+// /modal bootstrap
+
 // footer
 footer.footer 
 	.container 
