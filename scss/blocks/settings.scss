@@ -418,4 +418,101 @@ body {
     }
   }
 }
+.fancybox__slide  {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #000;
+  position: relative;
+}
+.fancybox__caption {
+  width: 90%;
+  padding-top: 0;
+  padding-bottom: 30px;
+  order: 1;
+}
+.fancybox__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90% !important;
+  height: auto !important;
+  padding: 30px 0 !important;
+  flex-grow: 1;
+  background: radial-gradient(50% 50% at 50% 50%, #535A65 0%, #232527 100%) !important;
+  border-radius: 8px;
+  order: 2;
+  &:after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #181818;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+  }
+  // img {
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   position: relative;
+  //   z-index: 2;
+  // }
+}
+.fancybox__thumbs {
+  background: #000;
+}
+.carousel__slide {
+  padding: 10px !important;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    background: radial-gradient(50% 50% at 50% 50%, #4B515B 0%, #232528 100%);
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 1;
+    border-radius: 8px;
+  }
+}
+.fancybox__thumb {
+  width: 85%;
+  margin: 10px;
+  padding-top: 85%;
+  border-radius: 8px;
+  background-size: contain;
+  background-color: transparent;
+  position: static;
+  z-index: 2;
+  &:after {
+    border-radius: 8px;
+    top: 10px !important;
+    left: 10px !important;
+    bottom: 10px !important;
+    right: 10px !important;
+  }
+}
+.fancybox__thumbs .carousel__slide .fancybox__thumb::after {
+  border: 1px solid $red !important;
+}
+.fancybox__counter {
+  display: none;
+}
+.carousel__button {
+  svg {
+    stroke: #A9A9AA;
+  }
+}
+.fancybox__nav {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+.carousel__button.is-prev, .carousel__button.is-next {
+  top: 55%;
+}
 /* /settings */

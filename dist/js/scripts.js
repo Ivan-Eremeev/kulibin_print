@@ -1168,9 +1168,12 @@ $(document).ready(function () {
 	copyText();
 
 	// Маска для полей || Inputmask
-	if ($('input[name="tel"]').length) {
-		$('input[name="tel"]').inputmask("+7(999)999-99-99");
+	function inputmask() {
+		if ($('input[name="tel"]').length) {
+			$('input[name="tel"]').inputmask("+7(999)999-99-99");
+		}
 	}
+	inputmask();
 
 	// Открыть скрытые символы в input passwod
 	function passwordVisible() {
@@ -1184,5 +1187,25 @@ $(document).ready(function () {
 		})
 	}
 	passwordVisible();
+
+	Fancybox.bind("[data-fancybox]", {
+		Toolbar: {
+			display: [
+				// "zoom",
+				// "slideshow",
+				// "fullscreen",
+				// "download",
+				// "thumbs",
+				"close",
+			],
+		},
+		Image: {
+			Panzoom: {
+				maxScale: function () {
+					return 0;
+				},
+			},
+		},
+	});
 
 });
