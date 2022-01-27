@@ -1,12 +1,15 @@
 .welcome {
-  padding: 180px 0 100px;
-  min-height: 980px;
   position: relative;
   background-image: url(../img/grid.png);
   background-position: bottom -300px right;
   background-size: 100% auto;
   background-repeat: no-repeat;
   overflow: hidden;
+  .container {
+    padding: 180px 0 100px;
+    min-height: 980px;
+    position: relative;
+  }
   &__content {
     position: relative;
     z-index: 2;
@@ -30,11 +33,13 @@
   &__img {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -150px;
   }
   @include media-breakpoint-down(xxl) {
-    min-height: 780px;
-    padding: 160px 0 80px;
+    .container {
+      min-height: 780px;
+      padding: 160px 0 80px;
+    }
     &__title {
       max-width: 750px;
       font-size: 46px;
@@ -42,7 +47,6 @@
     }
     &__img {
       width: 61%;
-      right: -100px;
       bottom: 50%;
       transform: translate(0,50%);
     }
@@ -50,12 +54,13 @@
   @include media-breakpoint-down(xl) {
     background-position: bottom -100px right;
   }
-  @include media-breakpoint-down(md) {
-    padding: 64px 0;
+  @include media-breakpoint-down(lg) {
     background-position: top right;
+    background-size: 150% auto;
     .container {
       display: flex;
       flex-direction: column;
+      padding: 64px 0;
     }
     &__content {
       order: 2;
@@ -71,6 +76,7 @@
     }
   }
   @include media-breakpoint-down(md) {
+    background-size: 200% auto;
     &__title {
       font-size: 36px;
       margin-bottom: 24px;
@@ -88,5 +94,8 @@
     &__img {
       margin-bottom: 54px;
     }
+  }
+  @include media-breakpoint-down(sm) {
+    background-position: top 100px right;
   }
 }
