@@ -171,6 +171,20 @@
 			}
 		}
 	}
+	&__profile {
+		background-color: #fff;
+		position: relative;
+		z-index: 9;
+	}
+	&__profileblock {
+		max-width: 400px;
+		padding: 20px 24px 36px;
+	}
+	&__profilehead {
+		padding: 24px 0;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #DDDFE0;
+	}
 	@include media-breakpoint-down(md) {
 		top: -1500px;
 		&__nav {

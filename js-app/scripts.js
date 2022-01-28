@@ -988,6 +988,9 @@ $(document).ready(function () {
 		if ($('input[name="tel"]').length) {
 			$('input[name="tel"]').inputmask("+7(999)999-99-99");
 		}
+		if ($('input[name="email"]').length) {
+			$('input[name="email"]').inputmask("*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]");
+		}
 	}
 	inputmask();
 

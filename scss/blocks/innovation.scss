@@ -12,6 +12,29 @@
     color: #545555;
   }
   &__sliders {
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      width: 10%;
+      background: linear-gradient(to right, #E9EBEC 20%, transparent);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 10%;
+      background: linear-gradient(to left, #E9EBEC 20%, transparent);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+    }
     .swiper-slide {
       width: auto;
     }
