@@ -106,6 +106,8 @@
     color: #848586;
   }
   &__del {
+    cursor: pointer;
+    user-select: none;
     svg {
       stroke: #B2B5B8;
     }

@@ -258,7 +258,7 @@ jQuery(document).ready(function ($) {
 		var $this = undefined,
 				drop = undefined,
 				header = $('.header__container'),
-				over = $('#menu-over'),
+				over = $('.menu__over'),
 				modal = $('.modal');
 		btn.on('click', function () {
 			$this = $(this);
@@ -271,8 +271,6 @@ jQuery(document).ready(function ($) {
 					&& $this.has(e.target).length === 0
 					&& !drop.is(e.target)
 					&& drop.has(e.target).length === 0
-					&& !header.is(e.target)
-					&& header.has(e.target).length === 0
 					&& !modal.is(e.target)
 					&& modal.has(e.target).length === 0) {
 					$this.removeClass('active');
@@ -288,6 +286,7 @@ jQuery(document).ready(function ($) {
 		})
 	}
 	dropMenu($('.js-menu-btn'));
+	dropMenu($('.js-user-btn'));
 
 	// // Блок с высотой окна браузера
 	// function screenHeight(fullHeight) {
