@@ -1254,4 +1254,24 @@ jQuery(document).ready(function ($) {
 	// 	maxUploadSize: 1024*1024*16,        // Define your server (max_post_size/upload_max_filesize), so the plugin can optimize chunk uploading process using this parameter
 	// });
 
+	// Переключение темы
+	function goggleTheme() {
+		var block = $('.header__checktheme'),
+				iconLight = $('.header__checktheme-icon--light'),
+				iconDark = $('.header__checktheme-icon--dark'),
+				page = $('.page');
+		block.on('click', function () {
+			if (!page.hasClass('dark-theme')) {
+				iconLight.removeClass('active');
+				iconDark.addClass('active');
+				page.addClass('dark-theme');
+			}else {
+				iconLight.addClass('active');
+				iconDark.removeClass('active');
+				page.removeClass('dark-theme');
+			}
+		})
+	}
+	goggleTheme();
+
 });

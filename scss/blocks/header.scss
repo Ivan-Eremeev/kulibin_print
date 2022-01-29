@@ -4,12 +4,17 @@
   left: 0;
   right: 0;
   z-index: 11;
+  * {
+    &:not(svg) {
+      transition: 0.2s;
+    }
+  }
   &__container {
     padding: 54px 0;
     background-color: #E5E5E5;
     position: relative;
     z-index: 10;
-    transition: 0.3s;
+    transition: 0.2s;
     &.open {
       background-color: #fff;
       .btn--white {
@@ -40,6 +45,12 @@
   }
   &__logo {
     flex-shrink: 0;
+    svg {
+      transition: 0.2s;
+      path {
+        transition: 0.2s;
+      }
+    }
   }
   &__slogan {
     max-width: 170px;
@@ -49,6 +60,7 @@
     font-size: 14px;
     line-height: 17px;
     color: #8F9090;
+    transition: 0.2s;
   }
   &__menu {
     
@@ -157,7 +169,6 @@
       &:nth-child(2) {
         margin-left: 5px;
         fill: #B8B9BA;
-        transition: 0.2s;
       }
     }
     &:hover, &.active {
@@ -193,6 +204,7 @@
     box-shadow: 0px 185px 170px rgba(0, 0, 0, 0.04), 0px 119.907px 99.5602px rgba(0, 0, 0, 0.0303704), 0px 71.2593px 54.1481px rgba(0, 0, 0, 0.0242963), 0px 37px 27.625px rgba(0, 0, 0, 0.02), 0px 15.0741px 13.8519px rgba(0, 0, 0, 0.0157037), 0px 3.42593px 6.68982px rgba(0, 0, 0, 0.00962963);
     border-radius: 18px;
     font-size: 15px;
+    transition: 0.2s;
     li {
       
     }
@@ -432,6 +444,7 @@
     left: 10px;
     right: 10px;
     bottom: -54px;
+    transition: 0.2s;
   }
   &__checktheme {
     display: inline-flex;
@@ -440,6 +453,7 @@
     border-radius: 36px;
     cursor: pointer;
     user-select: none;
+    transition: 0.2s;
   }
   &__checktheme-icon {
     display: flex;
@@ -448,8 +462,10 @@
     width: 26px;
     height: 26px;
     border-radius: 100%;
+    transition: 0.2s;
     svg {
       fill: #B8B9BA;
+      transition: 0.2s;
     }
     &.active {
       background-color: #fff;
@@ -570,6 +586,9 @@
       display: block;
       cursor: pointer;
       user-select: none;
+      svg {
+        stroke: #000;
+      }
     }
     &__container {
       padding: 40px 0;

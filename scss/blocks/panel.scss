@@ -1,11 +1,17 @@
 .panel {
   padding: 20px 0;
+   * {
+    &:not(svg) {
+      transition: 0.2s;
+    }
+  }
   &__block {
     display: flex;
     flex-direction: column;
     background-color: #fff;
     border-radius: 18px;
     height: 100%;
+    transition: 0.2s;
     &--1 {
       max-height: 780px;
     }
@@ -25,6 +31,7 @@
       left: 42px;
       right: 42px;
       bottom: 0;
+      transition: 0.2s;
     }
   }
   &__body {
@@ -59,15 +66,17 @@
     display: block;
     width: 50px;
     height: 50px;
-    padding: 4px;
     margin-right: 16px;
     flex-shrink: 0;
-    border: 1.5px solid $red;
+    border: 1px solid $red;
     border-radius: 100%;
     overflow: hidden;
     img {
+      display: block;
       width: 100%;
       height: 100%;
+      border: 4px solid transparent;
+      border-radius: 100%;
       object-fit: cover;
     }
   }
@@ -80,6 +89,7 @@
     line-height: 19px;
     margin-bottom: 2px;
     color: #000;
+    transition: 0.2s;
   }
   &__profile-text {
     font-size: 14px;
@@ -117,6 +127,9 @@
     height: 18px;
     margin-bottom: 4px;
     margin-right: 16px;
+    svg {
+      stroke: #C4C4C4;
+    }
   }
   &__menu-num {
     padding: 2px 8px 4px;
@@ -142,6 +155,7 @@
       left: 42px;
       right: 42px;
       top: 0;
+      transition: 0.2s;
     }
   }
   &__back {
@@ -151,6 +165,7 @@
     font-size: 12px;
     line-height: 14px;
     color: #000;
+    transition: 0.2s;
     svg {
       margin-top: 4px;
       margin-right: 9px;
@@ -254,6 +269,7 @@
       display: block;
       width: 100%;
       height: 100%;
+      border-radius: 100%;
       object-fit: cover;
     }
   }
@@ -326,6 +342,9 @@
     left: 20px;
     z-index: 2;
     cursor: text;
+    svg {
+      stroke: #BCBEBF;
+    }
   }
   &__table {
     overflow-y: auto;
@@ -349,7 +368,7 @@
       img {
         width: 50px;
         height: 50px;
-        border-radius: 15px;
+        border-radius: 17px;
         background-color: #DCE2E5;
         padding: 4px;
         object-fit: contain;
@@ -470,7 +489,7 @@
     user-select: none;
     svg {
       stroke: #BFC0C1;
-      transition: 0.2s;
+      transition: none;
     }
     &:hover {
       svg {
@@ -682,6 +701,268 @@
     }
     &__table-sn {
       white-space: pre-wrap;
+    }
+  }
+}
+
+.dark-theme {
+  background-color: #232528;
+
+  .header {
+    &__container {
+    background-color: #232528;
+    }
+    &__line {
+      background-color: #353639;
+    }
+    &__slogan {
+      border-color: #353639;
+      color: #727375;
+    }
+    &__checktheme {
+      background-color: #393B3E;
+    }
+    &__checktheme-icon {
+      svg {
+        fill: #5D5E61;
+      }
+    }
+    &__langbtn {
+      background-color: #393B3E;
+      color: #fff;
+      svg {
+        fill: #5D5E61;
+      }
+    }
+    &__langlist {
+      background-color: #393B3E;
+      color: #fff;
+      a {
+        color: #fff;
+        &:hover {
+          background-color: #58595C;
+        }
+      }
+    }
+    &__btn {
+      &:after, &:before {
+        background-color: #6A6B6D;
+      }
+    }
+    &__regicon {
+      svg {
+        stroke: #6A6B6D;
+      }
+    }
+  }
+  
+  .menu {
+    &__profile {
+      background-color: #232528;
+    }
+    &__profilehead {
+      border-color: #353639;
+    }
+  }
+
+  .footer {
+    background-color: #232528;
+    &--login {
+      .footer__bottom {
+        p, a {
+          color: #727375;
+        }
+      }
+    }
+    &__line {
+      background-color: #333437;
+    }
+  }
+
+  .logo-black {
+    fill: #6A6B6D;
+  }
+  .logo-red {
+    fill: #6A6B6D;
+  }
+  .btn {
+    &--grayborder {
+      color: #fff;
+      background-color: #232528;
+      border-color: #353639;
+      svg {
+        fill: #fff;
+      }
+      &:hover {
+        background-color: #fff;
+        svg {
+          fill: #000;
+        }
+        color: #000;
+      }
+    }
+    &--black {
+      background-color: #58595C;
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+    &--border {
+      border-color: #4D4E51;
+      color: #fff;
+      &:hover {
+        background-color: #4C4D50;
+      }
+    }
+  }
+  .input {
+    input {
+      background-color: #4C4D50;
+      color: #fff;
+    }
+  }
+
+  .panel {
+    &__block {
+      background-color: #353639;
+    }
+    &__profile-title {
+      color: #fff;
+    }
+    &__profile-icon {
+      svg {
+        fill: #656668;
+      }
+    }
+    &__menu-link {
+      color: #D0D1D1;
+      &:hover {
+        background-color: #4C4D50;
+      }
+    }
+    &__menu-icon {
+      svg {
+        stroke: #77787A;
+      }
+    }
+    &__head {
+      &:after {
+        background-color: #454649;
+      }
+    }
+    &__footer {
+      &:after {
+        background-color: #454649;
+      }
+    }
+    &__back {
+      color: #fff;
+    }
+    &__title {
+      color: #fff;
+    }
+    &__item {
+      background-color: #4C4E50;
+    }
+    &__item-num {
+      color: #fff;
+    }
+    &__quantity {
+      border-color: #444548;
+      span {
+        color: #fff;
+      }
+    }
+    &__formrow {
+      border-color: #444548;
+    }
+    &__table {
+      td {
+        background-color: #4C4E50;
+      }
+    }
+    &__table-title {
+      color: #fff;
+    }
+    &__table-sn {
+      background-color: #5A5C5E;
+    }
+    &__table-text {
+      color: #fff;
+    }
+    &__table-link {
+      color: #fff;
+      &:hover {
+        color: $red;
+      }
+    }
+    &__paginaton {
+      &:after {
+        background-color: #454649;
+      }
+    }
+    .news__list {
+      a {
+        background-color: #4C4D50;
+        color: #fff;
+        &.active, &:hover {
+          background-color: #656669;
+        }
+      }
+    }
+    @include media-breakpoint-down(md) {
+      &__table {
+        tr {
+          background-color: #4C4E50;
+        }
+        td {
+          background-color: transparent;
+          border-color: #636467;
+        }
+      }
+    }
+  }
+
+  .modal {
+    &__title {
+      color: #fff;
+      border-color: #636467;
+    }
+    &-content {
+      background-color: #3D3F41;
+    }
+    &__text {
+      color: #fff;
+    }
+    &__subtext {
+      color: #fff;
+    }
+    &__info-title {
+      color: #fff;
+    }
+    &__info-list {
+      background-color: #4C4D50;
+      color: #8c8c8c;
+    }
+  }
+
+  .fileuploader {
+    &__input {
+      background-color: #4C4D50;
+      border-color: #636467;
+    }
+    &__title {
+      color: #9C9C9C;
+    }
+    &__icon {
+      background-color: #3D3F41;
+    }
+    &__item {
+      background-color: #4C4D50;
+    }
+    &__item-text {
+      color: #fff;
     }
   }
 }

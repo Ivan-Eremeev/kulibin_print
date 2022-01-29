@@ -27,6 +27,7 @@ body {
   font-size: 18px;
   line-height: 1.5;
   letter-spacing: -0.02em;
+  // transition: 0.2s;
   &.lock {
     position: fixed;
   }
@@ -97,6 +98,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  transition: 0.2s;
 }
 .content {
   flex-grow: 1;
@@ -132,6 +134,7 @@ body {
   outline: none;
   white-space: nowrap;
   flex-shrink: 0;
+  transition: 0.2s;
   &--white {
     background-color: #fff;
     color: #000;
@@ -167,6 +170,7 @@ body {
     border: 1px solid #CDCFD0;
     svg {
       margin-right: 6px;
+      fill: #000;
     }
     &:hover {
       background-color: #fff;
@@ -536,5 +540,11 @@ body {
 }
 .carousel__button.is-prev, .carousel__button.is-next {
   top: 55%;
+}
+.logo-black {
+  fill: #080809;
+}
+.logo-red {
+  fill: $red;
 }
 /* /settings */
