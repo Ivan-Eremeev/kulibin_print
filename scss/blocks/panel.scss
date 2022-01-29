@@ -6,6 +6,9 @@
     background-color: #fff;
     border-radius: 18px;
     height: 100%;
+    &--1 {
+      max-height: 780px;
+    }
   }
   &__head {
     display: flex;
@@ -346,13 +349,14 @@
       img {
         width: 50px;
         height: 50px;
-        border-radius: 12px;
+        border-radius: 15px;
         background-color: #DCE2E5;
         padding: 4px;
         object-fit: contain;
         object-position: center;
       }
       &:first-child {
+        min-width: 84px;
         padding: 24px 10px 24px 24px;
         border-radius: 12px 0 0 12px;
       }
@@ -374,25 +378,63 @@
     line-height: 20px;
   }
   &__table-sn {
-    display: inline-block;
-    padding: 3px 8px 4px 22px;
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px 4px 8px;
     background-color: #EEF0F1;
     border-radius: 18px;
     font-size: 13px;
     line-height: 16px;
     color: #8A8B8B;
-    text-transform: uppercase;
     position: relative;
     &:after {
       content: '';
       display: block;
       width: 8px;
       height: 8px;
+      background-color: transparent;
       border-radius: 100%;
-      background-color: #69C630;
       position: absolute;
       top: 7.5px;
       left: 8px;
+    }
+    &--ttu {
+      text-transform: uppercase;
+    }
+    &--success {
+      padding: 3px 8px 4px 22px;
+      &:after {
+        background-color: #69C630;
+      }
+    }
+    &--error {
+      padding: 3px 28px 4px 22px;
+      &:after {
+        background-color: #D83A56;
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 14px;
+        height: 14px;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='15' viewBox='0 0 14 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.24'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.6004 7.4999C12.6004 8.98511 12.0104 10.4095 10.9602 11.4597C9.90998 12.5099 8.4856 13.0999 7.00039 13.0999C5.51518 13.0999 4.0908 12.5099 3.04059 11.4597C1.99039 10.4095 1.40039 8.98511 1.40039 7.4999C1.40039 6.01469 1.99039 4.59031 3.04059 3.5401C4.0908 2.4899 5.51518 1.8999 7.00039 1.8999C8.4856 1.8999 9.90998 2.4899 10.9602 3.5401C12.0104 4.59031 12.6004 6.01469 12.6004 7.4999ZM7.70039 4.6999C7.70039 4.88555 7.62664 5.0636 7.49537 5.19488C7.36409 5.32615 7.18604 5.3999 7.00039 5.3999C6.81474 5.3999 6.63669 5.32615 6.50542 5.19488C6.37414 5.0636 6.30039 4.88555 6.30039 4.6999C6.30039 4.51425 6.37414 4.3362 6.50542 4.20493C6.63669 4.07365 6.81474 3.9999 7.00039 3.9999C7.18604 3.9999 7.36409 4.07365 7.49537 4.20493C7.62664 4.3362 7.70039 4.51425 7.70039 4.6999ZM6.30039 6.7999C6.11474 6.7999 5.93669 6.87365 5.80542 7.00493C5.67414 7.1362 5.60039 7.31425 5.60039 7.4999C5.60039 7.68555 5.67414 7.8636 5.80542 7.99488C5.93669 8.12615 6.11474 8.1999 6.30039 8.1999V10.2999C6.30039 10.4856 6.37414 10.6636 6.50542 10.7949C6.63669 10.9262 6.81474 10.9999 7.00039 10.9999H7.70039C7.88604 10.9999 8.06409 10.9262 8.19536 10.7949C8.32664 10.6636 8.40039 10.4856 8.40039 10.2999C8.40039 10.1143 8.32664 9.9362 8.19536 9.80493C8.06409 9.67365 7.88604 9.5999 7.70039 9.5999V7.4999C7.70039 7.31425 7.62664 7.1362 7.49537 7.00493C7.36409 6.87365 7.18604 6.7999 7.00039 6.7999H6.30039Z' fill='%23080809'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 4.5px;
+        right: 8px;
+      }
+    }
+    &--detail {
+      padding: 3px 8px 4px 22px;
+      &:after {
+        width: 12px;
+        height: 12px;
+        margin-top: -2px;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.24'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.40039 2.89995C2.40039 2.58169 2.52682 2.27647 2.75186 2.05142C2.97691 1.82638 3.28213 1.69995 3.60039 1.69995H6.35199C6.67023 1.70002 6.9754 1.82649 7.20039 2.05155L9.24879 4.09995C9.47385 4.32494 9.60032 4.63012 9.60039 4.94835V10.1C9.60039 10.4182 9.47396 10.7234 9.24892 10.9485C9.02388 11.1735 8.71865 11.3 8.40039 11.3H3.60039C3.28213 11.3 2.97691 11.1735 2.75186 10.9485C2.52682 10.7234 2.40039 10.4182 2.40039 10.1V2.89995Z' fill='%23080809'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
     }
   }
   &__table-subtitle {
@@ -414,14 +456,51 @@
     color: #000;
     cursor: pointer;
     user-select: none;
+    transition: 0.2s;
     svg {
       margin-right: 6px;
+    }
+    &:hover {
+      color: $red;
     }
   }
   &__table-icon {
     margin-left: 24px;
     cursor: pointer;
     user-select: none;
+    svg {
+      stroke: #BFC0C1;
+      transition: 0.2s;
+    }
+    &:hover {
+      svg {
+        stroke: $red;
+      }
+    }
+  }
+  &__table-img-model {
+    padding: 0 !important;
+  }
+  &__paginaton {
+    display: flex;
+    justify-content: center;
+    padding-top: 36px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: #EBEBEB;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    .news__list {
+      margin-top: 0;
+    }
   }
   @include media-breakpoint-down(xxl) {
     &__quantity {
@@ -508,9 +587,11 @@
       }
     }
     &__table {
+      overflow: hidden;
       table {
         display: block;
         min-width: 0;
+        border-spacing: 0;
       }
       tr {
         display: flex;
@@ -518,7 +599,7 @@
         padding: 24px 20px;
         background-color: #F8FAFB;
         border-radius: 12px;
-        margin-bottom: 16px;
+        margin: 10px 0;
         position: relative;
       }
       td {
@@ -562,6 +643,25 @@
           padding: 0;
         }
       }
+      &--models {
+        td {
+          &:nth-child(3) {
+            width: 100%;
+            padding-left: 70px;
+            margin-bottom: 0;
+            border-bottom: none;
+            border-top: none;
+          }
+          &:nth-child(4) {
+            width: 100%;
+            padding-top: 0;
+            padding-left: 70px;
+            margin-top: 0;
+            border-top: none;
+            text-align-last: left;
+          }
+        }
+      }
     }
     &__table-icon {
       margin-left: 20px;
@@ -579,6 +679,9 @@
           margin-right: 0;
         }
       }
+    }
+    &__table-sn {
+      white-space: pre-wrap;
     }
   }
 }
