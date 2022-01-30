@@ -12280,10 +12280,6 @@ body.lock {
   padding-top: 56.25%;
 }
 
-*:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0 50px #fff !important;
-}
-
 *::-webkit-input-placeholder {
   color: #a9a9a9;
   opacity: 1;
@@ -12415,6 +12411,9 @@ body.lock {
 .btn--grayborder svg {
   margin-right: 6px;
   fill: #000;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .btn--grayborder:hover {
   background-color: #fff;
@@ -12678,6 +12677,12 @@ body.lock {
   outline: none;
   font-size: 16px;
   line-height: 19px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.input input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #F4F7F9 !important;
 }
 .input__label {
   font-size: 13px;
@@ -12700,6 +12705,18 @@ body.lock {
 }
 .input__icon svg {
   stroke: #9FA1A2;
+}
+.input__icon--visible {
+  display: none;
+}
+.input__icon.active .input__icon--hide {
+  display: none;
+}
+.input__icon.active .input__icon--visible {
+  display: block;
+}
+.input__icon:hover svg {
+  stroke: #000;
 }
 .input--password input {
   padding: 22px 60px 23px 24px;
@@ -12851,11 +12868,6 @@ body.lock {
   left: 0;
   right: 0;
   z-index: 11;
-}
-.header *:not(svg) {
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
 }
 .header__container {
   padding: 54px 0;
@@ -13042,6 +13054,11 @@ body.lock {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.header__langbtn svg {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -15118,11 +15135,6 @@ body.lock {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-.footer *:not(svg) {
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-}
 .footer--login {
   background-color: #E5E5E5;
 }
@@ -15256,6 +15268,9 @@ body.lock {
 .footer__line {
   height: 1px;
   background-color: #303132;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .footer__bottom {
   display: -webkit-box;
@@ -16841,11 +16856,6 @@ body.lock {
 .panel {
   padding: 20px 0;
 }
-.panel *:not(svg) {
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-}
 .panel__block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16900,6 +16910,9 @@ body.lock {
   font-weight: bold;
   font-size: 36px;
   line-height: 44px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .panel__title span {
   font-size: 24px;
@@ -16972,6 +16985,9 @@ body.lock {
 }
 .panel__profile-icon svg {
   fill: #C4C4C4;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .panel__menu-link {
   display: -webkit-box;
@@ -16998,6 +17014,9 @@ body.lock {
 }
 .panel__menu-icon svg {
   stroke: #C4C4C4;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .panel__menu-num {
   padding: 2px 8px 4px;
@@ -17235,12 +17254,20 @@ body.lock {
   font-size: 15px;
   line-height: 18px;
 }
+.panel__table tr {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
 .panel__table td {
   margin: -5px 0;
   padding: 24px 10px;
   background-color: #F8FAFB;
   vertical-align: middle;
   white-space: nowrap;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .panel__table td img {
   width: 50px;
@@ -17272,6 +17299,9 @@ body.lock {
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .panel__table-sn {
   display: -webkit-inline-box;
@@ -17287,6 +17317,9 @@ body.lock {
   line-height: 16px;
   color: #8A8B8B;
   position: relative;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .panel__table-sn:after {
   content: "";
@@ -17345,6 +17378,9 @@ body.lock {
 .panel__table-text {
   display: block;
   font-weight: bold;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .panel__table-link {
   display: -webkit-inline-box;
@@ -17503,6 +17539,9 @@ body.lock {
   }
   .panel__formrow {
     padding: 20px 0;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
   }
   .panel__formbtn {
     padding-top: 4px;
@@ -17708,6 +17747,13 @@ body.lock {
 .dark-theme .input input {
   background-color: #4C4D50;
   color: #fff;
+}
+.dark-theme .input input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #4C4D50 !important;
+  box-shadow: inset 0 0 0 50px #4C4D50 !important;
+}
+.dark-theme .input__icon:hover svg {
+  stroke: #fff;
 }
 .dark-theme .panel__block {
   background-color: #353639;

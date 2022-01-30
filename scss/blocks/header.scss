@@ -4,11 +4,11 @@
   left: 0;
   right: 0;
   z-index: 11;
-  * {
-    &:not(svg) {
-      transition: 0.2s;
-    }
-  }
+  // * {
+  //   &:not(svg) {
+  //     transition: 0.2s;
+  //   }
+  // }
   &__container {
     padding: 54px 0;
     background-color: #E5E5E5;
@@ -163,6 +163,7 @@
     user-select: none;
     transition: 0.2s;
     svg {
+      transition: 0.2s;
       &:nth-child(1) {
         margin-right: 8px;
       }

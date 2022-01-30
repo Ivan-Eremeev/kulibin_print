@@ -1,10 +1,10 @@
 .panel {
   padding: 20px 0;
-   * {
-    &:not(svg) {
-      transition: 0.2s;
-    }
-  }
+  //  * {
+  //   &:not(svg) {
+  //     transition: 0.2s;
+  //   }
+  // }
   &__block {
     display: flex;
     flex-direction: column;
@@ -42,6 +42,7 @@
     font-weight: bold;
     font-size: 36px;
     line-height: 44px;
+    transition: 0.2s;
     span {
       font-size: 24px;
       line-height: 29px;
@@ -104,6 +105,7 @@
     transition: 0.2s;
     svg {
       fill:#C4C4C4;
+      transition: 0.2s;
     }
   }
   &__menu {
@@ -129,6 +131,7 @@
     margin-right: 16px;
     svg {
       stroke: #C4C4C4;
+      transition: 0.2s;
     }
   }
   &__menu-num {
@@ -357,7 +360,7 @@
       line-height: 18px;
     }
     tr {
-      
+      transition: 0.2s;
     }
     td {
       margin: -5px 0;
@@ -365,6 +368,7 @@
       background-color: #F8FAFB;
       vertical-align: middle;
       white-space: nowrap;
+      transition: 0.2s;
       img {
         width: 50px;
         height: 50px;
@@ -395,6 +399,7 @@
     font-weight: bold;
     font-size: 16px;
     line-height: 20px;
+    transition: 0.2s;
   }
   &__table-sn {
     display: inline-flex;
@@ -406,6 +411,7 @@
     line-height: 16px;
     color: #8A8B8B;
     position: relative;
+    transition: 0.2s;
     &:after {
       content: '';
       display: block;
@@ -464,6 +470,7 @@
   &__table-text {
     display: block;
     font-weight: bold;
+    transition: 0.2s;
   }
   &__table-link {
     display: inline-flex;
@@ -598,6 +605,7 @@
     }
     &__formrow {
       padding: 20px 0;
+      transition: 0.2s;
     }
     &__formbtn {
       padding-top: 4px;
@@ -820,6 +828,16 @@
     input {
       background-color: #4C4D50;
       color: #fff;
+      &:-webkit-autofill {
+        box-shadow: inset 0 0 0 50px #4C4D50 !important;
+      }
+    }
+    &__icon {
+      &:hover {
+        svg {
+          stroke: #fff;
+        }
+      }
     }
   }
 
