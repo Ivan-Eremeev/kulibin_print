@@ -6,7 +6,8 @@
   background-repeat: no-repeat;
   overflow: hidden;
   .container {
-    padding: 180px 0 100px;
+    padding-top: 180px;
+    padding-bottom: 100px;
     min-height: 980px;
     position: relative;
   }
@@ -38,7 +39,8 @@
   @include media-breakpoint-down(xxl) {
     .container {
       min-height: 780px;
-      padding: 160px 0 80px;
+      padding-top: 160px;
+      padding-bottom: 80px;
     }
     &__title {
       max-width: 750px;
@@ -60,7 +62,8 @@
     .container {
       display: flex;
       flex-direction: column;
-      padding: 64px 0;
+      padding-top: 64px;
+      padding-bottom: 64px;
     }
     &__content {
       order: 2;
